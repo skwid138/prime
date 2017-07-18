@@ -44,7 +44,7 @@ isGreaterThan( 120, 1);
 when refrencing the first index item it is called the 0th (zero-ith) or sub 0
 */
 
-/*Prototypes*/
+/*Prototypes
 
 // Constructor Function
 function Dog ( name, breed, tricksArray) {
@@ -68,3 +68,36 @@ puppy.bark();
 yourDog = new Dog("Lola", 'Cattle Dog', ['Dance', 'Roll Over']);
 
 console.log(yourDog);
+*/
+
+/*Prototypes Part 2
+
+var dogQuote = "Woof! woof! grrr..";
+
+// this looks at string prototype
+console.log(Object.getPrototypeOf(dogQuote));
+
+console.log(dogQuote.length);
+
+//methods are functions and need to be followed by ()
+console.log(dogQuote.toUpperCase());
+
+var dogHouse = {
+  location: 'backyard',
+  heightInFeet: 2
+};
+
+dogHouse.color = "red";
+
+console.log(dogHouse);
+*/
+
+// this is adding a new method to the string prototype called 'wharAreYou'
+// it is a function so when calling it () must follow
+String.prototype.whatAreYou = function() {
+  console.log('I am a string!');
+};
+
+var song = "Happy Birthday song";
+
+song.whatAreYou();
