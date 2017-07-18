@@ -10,6 +10,7 @@ console.log(testVar);
 
 */
 
+/*
 var clicks = 0;
 var tau = 6.28318;
 
@@ -22,7 +23,6 @@ var addClick = function( ) {
   console.log( 'clicks:', clicks );
   // check if greater than tau
   console.log( isGreaterThan( clicks, tau ));
-
 }; // end addClick
 
 var isGreaterThan = function ( number0, number1 ) {
@@ -30,9 +30,10 @@ var isGreaterThan = function ( number0, number1 ) {
     return true;
   } else {
     return false;
-    // I dont think this else is needed, but it's in the video
+    // If else isn't written here it returns undefined in the console
   }
 };
 
 // this function can now be used over and over
 isGreaterThan( 120, 1);
+*/
