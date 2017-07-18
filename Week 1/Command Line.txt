@@ -1,0 +1,20 @@
+ls - lists the folders inside of the current directory
+
+when changing directories you can use tab to autocomplete the folder name
+
+pwd - print working directory: shows your current path
+
+mkdir [name] - make directory
+
+touch [file name] - creates a file
+
+open . - opens a file (that was just created)
+
+
+GIT
+
+git init - initializes an empty repo in current directory
+
+git status - shows things that are or are not being tracked for commits
+
+git add . - this seems to be the same as git add --all, the period represents the current directory
