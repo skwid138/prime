@@ -1,5 +1,21 @@
 /*jQuery */
 
+.animate()
+// takes two inputs: the animation to perform, and the time in which to perform the animation. Here's an example:
+$(document).ready(function() {
+  $('div').animate({left:'+=10px'},500);
+});
+// This will take the first div it finds and move it ten pixels to the right. Remember, increasing the distance from the left margin moves something to the right; the += bit is just a shorthand for "take the existing number and add ten to it." In this case, it add ten pixels to the current distance from the left margin.
+
+.keydown()
+// triggered whenever a key on the keyboard is pressed. It only works on whatever page element has focus, so you'll need to click on the window containing your div before pressing a key in order for you to see its effects.
+
+.focus()
+// an element has focus when we click on it or tab over to it. If you've ever filled out a form on a web page and seen how each text box lights up when you tab to it or click on it, you've seen focus in action!
+// The .focus() event handler only works on elements that can receive focus—the list of these elements is a bit vague, but HTML elements like <textarea>s and <input>s are the usual suspects.
+
+.dblclick()
+// for double clicks
 
 .on()
 // a general handler that takes the event, its selector, and an action as inputs. The syntax looks like this:
