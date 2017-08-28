@@ -56,3 +56,15 @@ colors.push('white');
 
 // Hoisting - when lines of code are used out of their chronological order.
 // code on line 4 might be hoisted above line 2
+
+// Layout of code - top to bottom
+// this format is used so that variables and functions exist before they are called or refrenced
+
+// global variables
+// functions a-z (declare local variables at the top of functions)
+// function calls
+// loops
+
+// with this format hoisting will never be an issue 
+// hoisting will fix bad formatting where a function is called before it is written
+// function declarations will not hoist and will return an error that it is not a function
