@@ -1,3 +1,19 @@
+/* Week 1 - Tuesday */
+
+// cmd space - in osx opens spotlight search
+
+// terminal
+// / - root
+// pwd - print working directory
+// ~ - home directory
+// touch [file name] - creates a file
+// cat - displaying them, combining copies of them and creating new ones
+// rm -rf [file path] - removes a folder and everything in it (-rf recursive force)
+// control c (^c) - quits terminal task
+// ls -a - lists files and hidden files
+
+
+
 /* Week 1 - Monday
 // - JS Review 
 // - functions
