@@ -9,8 +9,11 @@
 // touch [file name] - creates a file
 // cat - displaying them, combining copies of them and creating new ones
 // rm -rf [file path] - removes a folder and everything in it (-rf recursive force)
-// control c (^c) - quits terminal task
+// control c (^c) - quits terminal task (otherwise q is often used to exit)
 // ls -a - lists files and hidden files
+// man - can be added to commands to see how to use them
+// mkdir - creates a directory
+// 
 
 
 
