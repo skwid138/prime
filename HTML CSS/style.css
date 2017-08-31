@@ -1,0 +1,28 @@
+h1 {
+    color: red;
+    font-family: 'sans';
+}
+
+p {
+    font-family: 'arial';
+    color: blue;
+}
+
+.whatever {
+    color: #974EDE;
+
+}
+article {
+    border: 2px;
+    border-style: solid;
+    border-color: #D9CA38;
+    background-color: #20DA99;
+    width: 32%;
+    float: left;
+    font-family: 'Calibri';
+    border-radius: 15px;
+}
+
+img{
+    width: 100%;
+}

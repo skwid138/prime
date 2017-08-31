@@ -1,3 +1,67 @@
+/* Week 1 - Thursday */
+
+// live solve
+// - should usually have an else to make sure nothing falls through the cracks
+// - good idea to log the start of function and param(s) to make sure it's taking arguments
+// - create variables for calc function set values to 0
+// - create object that is equal to new variable values
+// - can test again to make sure new object is being made with 0 values
+// - should create first if then test, to confirm it's working before moving to next if
+// - can log in each if/else when it evalutes true
+// - Number() is similar to parseInt() except it wont make it a whole number
+// - math.round will round down if it's evanNum.5 and up if it's oddNum.5
+// - can use 'varName = false;' an if (varName) console.log(about something) to quickly clean up console and then change to error check later
+
+
+// HTML and CSS - HTML and CSS folder
+// - once you've made a decent css page(or two), just save it
+// - typically use double quotes in markup and single in javascript
+// -  with html 5 it's more common to have a header main and footer inside a body tag
+// - using a % for an image will use the max size of it's parent container
+
+//jQuery
+// - "Vendors" is often a term used to refer to things sourced from someone else - such as jquery
+// - a jQuery library is often put in a vendors dir
+// $ = jQuery
+// logging doc ready in your jquery function is a way to make sure the js file is loaded before the jquery is called
+// - decsendants are elements, classes, or ids inside of a container
+// $('div h2') for exaample
+// - direct decsendents are elements, classes, and ids directly inside a container 
+// $('div > h2') for example
+// - to select multiple selectors use a comma to separate them
+// $('div, h2') for example
+// - you can also combine the above with decsendants and direct decsendants
+// - $('something').children() shows all child elements
+// - $('something').children().first() shows the first child element
+// - $('something').parent() shows the elements above an element
+// - you can chain as many methods together as you want
+// - find is a good method to use
+// - filter is also a good method
+// - psuedo selectors are good to research
+
+
+
+
+
+/* Week 1 - Wednesday */
+
+// Taylor Time
+
+// weekly assignments
+// weekly mentoring (thursday evenings)
+// must meetup with mentor every other week
+// one person will create a new free slack channel for the mentor group
+// after first meeting we need to schedule our own meetup
+// avg 1-3 meetups a week
+// javascript mn is a good meetup
+
+// example questions for mentors
+// - tell me about an amazing week
+// - whats a bad week
+// - how often are good vs bad
+// - projects vs products
+// - 
+
 /* Week 1 - Tuesday */
 
 // cmd space - in osx opens spotlight search
@@ -13,7 +77,105 @@
 // ls -a - lists files and hidden files
 // man - can be added to commands to see how to use them
 // mkdir - creates a directory
-// 
+
+//git
+// git push -u origin master (once you've done -u origin master you're 
+// able to just push and it will default to the master branch)
+// git checkout -- [file name] (lets you roll back before a commit and deletes any progress)
+// if you want to rollback to a prior commit you can git log first and copy and paste the hash number
+// git checkout master - brings you back to the master version
+// mv [file name - from] [file name - to] - this can be used to rename a file or move it
+// cp [file name - from] [file name - to] copies a file 
+// .gitignore - https://help.github.com/articles/ignoring-files/  git will ignore these files
+// git diff - Compare modified files
+// git blame - Show what revision and author last modified each line of a file
+// git stash - when you want to record the current state of the working 
+// directory and the index, but want to go back to a clean working directory
+// git pull - pulls current remote repo (https://stackoverflow.com/questions/3620633/what-is-the-difference-between-pull-and-clone-in-git)
+// git clone - Clones a repository into a newly created directory, creates 
+// remote-tracking branches for each branch in the cloned repository (visible using git branch -r), 
+// and creates and checks out an initial 
+// branch that is forked from the cloned repository's currently active branch.
+
+// Object literal
+console.log('js');
+
+var lunchboxes =[];
+
+var tempLunchbox = {
+    size : 'medium',
+    handle: true,
+    color: 'blue',
+    image: false
+}; // end tempLunchbox
+
+// constructor
+function Lunchbox( sizeIn, handleIn, colorIn, imageIn ) { //usually use capital letter for first letter of constructors
+    this.size = sizeIn;
+    this.handle = handleIn;
+    this.color = colorIn;
+    this.image = imageIn;
+}; // end Lunchbox Constructor
+
+var otherLunchbox = new Lunchbox( 'medium', true, 'red', true);
+lunchboxes.push( otherLunchbox);
+console.log(otherLunchbox);
+
+var originalLunchbox = new Lunchbox('medium', true, 'red', true)
+lunchboxes.push(originalLunchbox);
+
+// create lunch boxes with constructor and push to array
+lunchboxes.push(originalLunchbox = new Lunchbox('medium', true, 'red', true)); // this also works
+
+// putting a var in an array just takes the value of the var and doesn't change the var itself
+
+// search for lunch boxes with images
+function whatever ( images) {
+    // create an empty array to hold results
+    var results = [];
+     for (var i = 0; i < lunchboxes.length; i++) {
+         // for each lunchbox
+         // are we looking for images
+         if ( images ) {
+             if (lunchboxes[i].image) { // this evaluates true if there is an image
+                 results.push(lunchboxes[i]);
+             } // found match
+         } else { // end image
+             if (!lunchboxes[i].image) { // this evaluates true if there is an image
+                 results.push(lunchboxes[i]);
+             } // found match
+         }
+     } //end for
+     return results;
+} // end whatever
+
+// refactored
+// search for lunch boxes with images
+function whatever(images) {
+    // create an empty array to hold results
+    var results = [];
+    for (var i = 0; i < lunchboxes.length; i++) {
+        // for each lunchbox
+        // are we looking for images
+        if (lunchboxes[i].image === images) { // this evaluates true if there is an image
+            results.push(lunchboxes[i]);
+        } // found match
+    } //end for
+    return results;
+} // end whatever
+
+function bothHandleImage() {
+    // empty array
+    var results =[];
+    for (var i = 0; i < lunchboxes.length; i++) {
+        if ( lunchboxes[i[.handle && lunchboxes[i].image]]) {
+            results.push(lunchboxes[i]);
+        }
+        return results;
+    }
+} // end bothHandleImage
+
+// if we want to make this more searchable try making it take arguments 
 
 
 
