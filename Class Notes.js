@@ -1,9 +1,17 @@
 /* Week 1 - Friday */
 
+/*** If I have time this weekend change Inventory app
+ - don't allow empty input (play a sound or show an alert)
+ - don't allow duplicates (or add quantity)
+    - check val()
+    - maybe alert are you sure you want to add
+ - display results on screen
+*/
+
 // SPA - Single Page Application
 // using made up words for testing can be a useful way to identify if tests are still running
 // in jquery a getter collects information and a sender sends information
-// .val() is a getter and as sender
+// .val() is a getter and .val('somethingHERE') iss sender
 
 /******************************************/
 /* Live Solve Notes
