@@ -8,10 +8,28 @@
  - display results on screen
 */
 
+// is there a way to view jquery event listeners on elements
+
+
 // SPA - Single Page Application
 // using made up words for testing can be a useful way to identify if tests are still running
 // in jquery a getter collects information and a sender sends information
 // .val() is a getter and .val('somethingHERE') iss sender
+// $ - in jQuery is commonly referred to as bling
+
+
+
+/*******************************************/
+/* this, .data(), .on()
+
+- .append() will always add (or append) to the end of the element
+- .appendTo() allows things to be appended to other areas
+- closing tags
+- same as concat in main append
+
+Still working in prime/HTML CSS
+
+*/
 
 /******************************************/
 /* Live Solve Notes
