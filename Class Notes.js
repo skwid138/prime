@@ -1,3 +1,164 @@
+/* Week 1 - Friday */
+
+// SPA - Single Page Application
+// using made up words for testing can be a useful way to identify if tests are still running
+// in jquery a getter collects information and a sender sends information
+// .val() is a getter and as sender
+
+/******************************************/
+/* Live Solve Notes
+
+root folder
+- index.html
+- scripts(dir)
+    -- inventory.js
+- vendors(dir)
+    -- jQuery.js
+- styles(dir)
+    -- style.css
+
+
+**inventory.js**
+code comments
+
+- global variable to store objects
+var inventory = [];
+
+- inventory item object constructor
+function Item (sizeIn, colorIn, nameIn) {
+    this.size = sizeIn;
+    this.color = colorIn;
+    this.name = nameIn;
+    // adds newly created inventory objects to the array
+    inventory.push( this ); 
+}
+
+function readyNow() {
+    console.log('JQ');
+    $('#addItemButton').on('click', addItem);
+    $('#searchButton').on('click', searchNow);
+} // end readyNow
+
+function addItem() {
+    // get user input
+    // can wrap the jquery in console.log to check output individually before making the object
+    // use input to create object(inventory item)
+    new Item ( $('#nameIn').val( ), $('#sizeIn').val( ), ('#colorIn').val( ));
+    // push item into array
+    // reset input
+    $('#nameIn').val( '' );
+} // end addItem
+
+function searchNow () {
+    // get user input
+    var sizeSearch = $('#sizeInSearch).val();
+    var colorSearch = $('#colorInSearch).val();
+    console.log('looking for', sizeInSearch, 'and', colorInSearch)
+    // check for matches
+    // our matches
+    var matches = [];
+    // loop through inventory array
+    if (var i= o; i < inventory.length: i++) {
+        console.log('checking:');
+        // for each item check if size and color match (compound conditional)
+        if ( inventory[ i ].size === sizeSearch && inventory[ i ].color === colorSearch ) {
+            // both must be true
+            console.log( 'match found' )
+            // if match, push into matches array
+            matches.push( inventory[ i ]);
+        }
+    }
+    // return matches array
+    console.log( 'matches: ', matches);
+} // end searchNow
+
+$(document).ready(readyNow);
+
+**index.html**
+
+// an article is often similar content or similarly formated content
+// a section is usually different content which is displayed differently
+
+// for the input dev prefers to use placeholder instead of  'name: ' followed by <input>
+
+// <select></select> creates a drop down list (it has a lot more complex options you can do with it, like defaulting to a setting, etc.)
+// within select <option></option> is used for each item in the list
+
+// input and select are on the same lines unless there is a line break
+
+<body>
+    <header>
+        <h1>Do You Have This</h1>
+    </header>
+    <main>
+        <section id="addItemSection">
+            <h2>Add New Item:</h2>
+            <p><input type="text" placeholder="name goes here" id="nameIn"></p>
+            <select id="sizeIn>
+                <option>Tiny</option>
+                <option>Small</option>
+                <option>Med</option>
+                <option>Large</option>
+                <option>Huge</option>
+            </select>
+            <select id="colorIn>
+                <option>Red</option>
+                <option>Orange</option>
+                <option>Yellow</option>
+                <option>Green</option>
+                <option>Blue</option>
+                <option>Violet</option>
+            </select>
+            <button id="addItemButton">Add Item</button>
+        </section>
+        <section id="searchSection>
+            <h2>Search: </h2>
+            <select id="sizeInSearch>
+                <option>Tiny</option>
+                <option>Small</option>
+                <option>Med</option>
+                <option>Large</option>
+                <option>Huge</option>
+            </select>
+            <select id="colorInSearch>
+                <option>Red</option>
+                <option>Orange</option>
+                <option>Yellow</option>
+                <option>Green</option>
+                <option>Blue</option>
+                <option>Violet</option>
+        </section>
+        <button id="searchButton">Search</button>
+    </main>
+    <footer>
+        <p>copyright 2017</p>
+    </footer>
+</body>
+
+
+
+
+*/
+/******************************************/
+//Inventory App - Do you have this?(jQuery)
+
+// - Object (inventory[])
+// -- size (tiny, small, med, larger, huge [select])
+// -- color (ROYGBV [select])
+// -- name (string, [text])
+// -Input (form "add")
+// - search (choose size, choose color [drop downs])
+// - "search" button
+// return an array of all matches[]
+// input and search will be sections of main in html
+
+// Create Objects
+// put objects in array
+// get user input to create
+// get user input to search
+// returns search results
+
+
 /* Week 1 - Thursday */
 
 // live solve
