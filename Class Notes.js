@@ -1,8 +1,52 @@
 /* Week 2 - Tuesday */
 
+/*******************Lecture Block: Node Modules******************
+ 
+- in package.json under scripts
+    'start': "node server.js"
+
+
+on a new file [fileName].js
+
+function funcName () {
+    var varName = [something];
+    return [something];
+}
+module.export = funcName();
+
+
+** if there is a bit of code that would be useful in multiple projects then make it a module
+
+
+
+ */
+
+/***************Peer activity notes*********************
+
+- create a new get route on server.js
+
+- setup click listener on client.js
+- function to make a get request
+- call ajax on bling($) in the request function
+$.ajax({
+    method: 'GET',
+    url: '/[new Get],
+    success: function() {
+        console.log(' back from server with: ', response)
+    }
+});
+- on server.js setup console log in new get route
+    - test this out
+- res.send('my mom');
+
+
+ */
+
 // ** a good rule of thumb for commits is if you're needing to use multiple "and"s then you should be doing more commits
 
 /***********Lecture: Express Intro, REST Intro***********
+
+https://github.com/PrimeAcademy/canopus-intro-express-ajax/tree/e716092b129791d61b69bee68e32539bde890d9e
 
 file structure
  - server.js
