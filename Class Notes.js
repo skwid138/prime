@@ -1,5 +1,7 @@
 /* Week 2 - Tuesday */
 
+// ** a good rule of thumb for commits is if you're needing to use multiple "and"s then you should be doing more commits
+
 /***********Lecture: Express Intro, REST Intro***********
 
 file structure
@@ -13,7 +15,6 @@ file structure
  - node_modules
  - .gitignore
  - package.json
- - 
 
 - do not need to commit node_modules
     - touch .gitignore
@@ -31,6 +32,9 @@ file structure
     - this modifies the package.json file to show express as a dependency the --save makes the json file update
     - also creates node_modules dir
 
+- npm install jquery 
+    - will download jQuery if you don't use --yes then you can move the file into public/vendors dir
+
 - npm uninstall [module name]
     - this is the preferred way (rather then editing the .json file) this will clean up the directories as well as remove the dependency in the.jason file
 
@@ -45,7 +49,8 @@ file structure
     - 
 
 REST - Representational State Transfer
-- get --> Read (get something)
+ get --> Read (get something)
+ POST --> Create
 
 - Do not need to listen before get
 
@@ -64,7 +69,9 @@ REST - Representational State Transfer
 - the script tag on an html file will prompt the server for the file so the source in this instance would be
     - src="/scripts/client.js"
 
-- app.use(express.static()); this lets express handle locating static files so they can be refrenced on html
+- app.use(express.static()); this lets express handle locating static files so they can be referenced on html
+
+- ajax is a method we call on $(bling) in jquery to talk to the server
 
 ******************in server.js******************
 var express = require('express'); // because this is a node package the path is not needed
@@ -103,7 +110,24 @@ app.get('/cats'. function(req, res) { // to access this in the browser 'localhos
     res.send(catsArr); // prints the array to the browser
 });
 
+*************** in client.js************************
+function onReady() {
+    console.log('doc ready');
+    $.ajax({
+        type: 'GET', // method or verb
+        url: '/cats'
+        success: function(response) { // param can be called anything
+            // success runs when the server response is successful
+            console.log('in success', response); // this logs in the browser because this file is running in the browser
+        }
+        error: function(){
+                // if the get fails it can execute this function
+        }
+        }
+    })
+}
 
+$(document).ready(onReady);
 
 
 
