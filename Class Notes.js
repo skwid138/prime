@@ -1,3 +1,193 @@
+/* Week 2 - Tuesday */
+
+/***********Lecture: Express Intro, REST Intro***********
+
+file structure
+ - server.js
+ - public (dir)
+    - scripts (dir)
+        - client.js
+ - node_modules
+ - .gitignore
+ - package.json
+ - 
+
+- do not need to commit node_modules
+    - touch .gitignore
+    - open this file in vs code
+    - add "node_modules/"
+
+- npm init - This initializes dirs as a node project
+- Express is a package used with node
+
+- npm init --yes 
+    - will force the init without prompting for questions
+    - after init a package.json file is created 
+
+- npm install express --save
+    - this modifies the package.json file to show express as a dependency the --save makes the json file update
+    - also creates node_modules dir
+
+- npm uninstall [module name]
+    - this is the preferred way (rather then editing the .json file) this will clean up the directories as well as remove the dependency in the.jason file
+
+- to test things via terminal
+    - node [file name ei script.js]
+    ??? does the file need to be in a certain folder
+
+- in order to make the server.js file an actual server it needs to listen
+
+- to access your server through a browser you can use your ip, self assigned ip, or 'localhost:[port number]
+    - when server is not running the browser will say it's unreachable
+    - 
+
+REST - Representational State Transfer
+- get --> Read (get something)
+
+- Do not need to listen before get
+
+- control C to kill server
+
+- res.sendStatus([code here]); - https://www.npmjs.com/package/http-status-codes
+    - 200s are OK
+    - 300s redirects
+    - 400s ask wrong question
+    - 500s broken server
+
+- cannot make multiple app.get() calls on the same directory (ie '/') if you do it'll just run the 1st one
+    - app.get() expects two arguments the path and a function
+    - the function takes 2 arguments request and response, they do not need to be named as such
+
+- 
+
+******************in server.js******************
+var express = require('express'); // because this is a node package the path is not needed
+// this allows us to call methods etc. on express
+var app = express();
+
+app.listen(3003 function) { // the port doesn't matter for testing often 3000 or 5000 are used when we actually deploy we'll be using ???
+// we're going to use huroku and it sets the port for us
+    console.log('I'm a server'); // this does not return the prompt, but demonstrates it's listening
+} 
+
+app.get('/', function(req, res) { // express automatically creates the request and response object
+// this is saying get something from the base of the server tree
+    console.log('in the get /');
+    res.send('a string goes here'); // when a get is ran it will respond with a string
+    res.sendStatus([number has to go here]); // status codes
+});
+
+var catsArr = ['cat1', 'cat2', 'cat3'];
+
+app.get('/cats'. function(req, res) { // to access this in the browser 'localhost:5000/cats
+    res.send(catsArr); // prints the array to the browser
+});
+
+
+
+*/
+
+
+
+
+/* Week 2 - Monday */
+
+/******************Live Solve - Code Challenge Week 1******************
+
+** can append variables like this
+$div.append($('<p>', { 'text' : varName }));
+
+doing the same as above you can add text to an element as well
+$div.append($('<p>', { 'text' : 'someText' }));
+
+making each append it's own variable seems to make it easier to append things where you want and keeps the code clean
+
+.css() is a getter and a setter
+in the challenge .css( 'background-color' )
+
+
+*/
+
+/****** Lecture: Node Install, The Internet, What is a Server?*******
+
+- Ajax - a client-side script that communicates to and from a server/database without the need for a postback or a complete page refresh.
+https://www.seguetech.com/ajax-technology/
+
+the client hands ajax a js object
+ajax converts that to json which is handed to node
+node then does whatever it needs to with the json and hands ajax back json or a js object
+*/
+
+/* when using .data
+- if it's hard coded in html it looks like data-[nameHere]="[valueHere]"
+- if it's being used in jQuery 
+*/
+
+/******************Live Solve****************** 
+ 
+mockaroo - generates fake data to use
+
+- create README.md
+- create js file
+- create index
+- copy jQuery 
+
+- list of objectives in README
+- Create index.html and source in js and jq
+- ** git ignore the ds store file osx puts in every dir
+- git init and commit
+
+- create first name input field and submit button
+- create event listener for submit button
+- declare var for first name using jq
+- create html table <thead> and <tbody>
+- declare row $('<tr></tr>') as a var
+- append '<td> + first name + </td>' to the row variable
+- append row var to tbody
+- append the submitted info to the DOM
+
+** .append() is like concatenation, but for html - it doesn't have to be appended to something on the dom it can be appended to a variable that is used later.
+
+- at this point you could validate the input (make sure it has data)
+- declare var for all other input and append them to row as well
+-  add html inputs using the id's created in the js file
+
+** using a class on the inputs would allow one call to clear all fields instead of calling val( '' ) on each one
+
+** adding type="text" or type="number" to input will only accept certain inputs and on mobile will popup certain keyboards (it will still come through as a string in js)
+
+- declare var for parseFloat(salary) using this will retain the entire number even if it's not whole
+- divide the salary number by 12 and append it to the dom
+- using .text(varName)
+
+** .text() or .html() will replace anything that's already on the page
+
+** toFixed(2) to return integers out to 2 decimal places (there may also be a currency method)
+** could also multiply by 100 then divide by 100 ie. Math.floor(var * 100) / 100 to remove the extra decimal places
+
+** try to keep function to roughly 20 lines each to make it easier for yourself and others to follow
+
+** rebuilding all the data (in the table) everytime is generally the way to do it if multiple people are working on things you want to make sure nothing is missed
+
+** $(tableName).empty() will clear all the fields before all the data is written again, which is needed taking this approach to rebuilding the data everytime
+
+- rewritting the data this way also makes remove an employee easier as well as makes the recalculation of the monthly salary cost easier
+
+- using the employee id and .data() to remove a user will also allow the monthly total to be recalculated when they're removed
+- add a new html table header for remove
+- create a delete button in for loop that makes employee row
+var $deleteButton = $('<td><button data-eid="' + person.id + '">Remove</button></td>")
+- append that to $row which is being appended to the DOM already
+
+- could make the remove button the same as submit, but it pops the person from the array and then rebuilds the table
+- for loop to run through the array and compare property to find a match to the id then pop that person and recall the function
+
+
+*/
+
+
+
+
 /* Week 1 - Friday */
 
 /*** If I have time this weekend change Inventory app
@@ -28,6 +218,8 @@
 - same as concat in main append
 
 Still working in prime/HTML CSS
+
+- .data('color') --- this would look for data-color property of an html element 
 
 */
 
