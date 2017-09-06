@@ -7,6 +7,9 @@ file structure
  - public (dir)
     - scripts (dir)
         - client.js
+    - vendors (dir)
+    - views (dir)
+        - index.html
  - node_modules
  - .gitignore
  - package.json
@@ -58,17 +61,34 @@ REST - Representational State Transfer
     - app.get() expects two arguments the path and a function
     - the function takes 2 arguments request and response, they do not need to be named as such
 
-- 
+- the script tag on an html file will prompt the server for the file so the source in this instance would be
+    - src="/scripts/client.js"
+
+- app.use(express.static()); this lets express handle locating static files so they can be refrenced on html
 
 ******************in server.js******************
 var express = require('express'); // because this is a node package the path is not needed
 // this allows us to call methods etc. on express
 var app = express();
 
+var path = require('path');
+
 app.listen(3003 function) { // the port doesn't matter for testing often 3000 or 5000 are used when we actually deploy we'll be using ???
 // we're going to use huroku and it sets the port for us
     console.log('I'm a server'); // this does not return the prompt, but demonstrates it's listening
 } 
+
+// express static file serving
+app.use(express.static('public'));
+
+app.get('/', function(req, res) { 
+    console.log('in the get /');
+    var ourIndexPath = path.join(_dirname, './public/views/index.html')
+    // _dirname is the location on the server (or local computer in this instance)
+    // this is done to keep it dynamic so it can be run from a different machine
+    console.log('path', ourIndexPath)
+    res.sendFile(ourIndexPath);
+});
 
 app.get('/', function(req, res) { // express automatically creates the request and response object
 // this is saying get something from the base of the server tree
@@ -82,6 +102,8 @@ var catsArr = ['cat1', 'cat2', 'cat3'];
 app.get('/cats'. function(req, res) { // to access this in the browser 'localhost:5000/cats
     res.send(catsArr); // prints the array to the browser
 });
+
+
 
 
 
