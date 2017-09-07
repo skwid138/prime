@@ -1,4 +1,114 @@
-/* Week 2 - Tuesday */
+/* Week 2 - Thursday */
+
+
+/************* Taylor Time *************
+
+- Networking -
+
+Assignment
+    - NEED to attend a networking event sometime from now until next friday
+    - create a tech.mn profile
+    - create a meetup account with photo
+    - create a profile on eventbrite
+
+    - must average 1-2 events a week
+    - meetups, conferences, speaches/talks
+    - plan events out 2 weeks in advance
+
+- tech.mn
+    - events tab (shows events)
+
+9/12 - mpls jr dev (@ prime)
+
+** popular events **
+- JavaScript MN (last wednesday of the month)
+- Angular MN (first wednesday of month)
+- NodeMN (2nd tuesday of the month)
+
+
+DO NOT bring anything  (resume, business cards, etc.)
+
+Smart Goals (specific, measurable, achievable, reasonable, timely)
+- set goals for each meetup
+- try to get something out of it
+    - talk to speaker
+    - talk to hiring managers
+    - avoid prime grads
+- setup meetings outside the meetup
+    - get coffee 
+    - learn about being a dev
+    - learn about being a dev for a specific company
+
+Twin Cities Startup Week oct (8)9-15
+- tickets are free
+- oct 8 sunday opening night $5?
+- beta MN oct 10 tuesday
+- tech stars oct 11 demo day
+- oct 12 minnedemo (7 businesses present live code) by minnestar (happens every quarter)
+- oct 13 closing event
+
+minnebar - happens every 6 months
+
+
+** websites of interest **
+- minnestar.org
+- tctech.events (links are often broken and dates are often wrong, but is a good list of events)
+
+ 
+
+
+ */
+
+
+/******************Lecture Block: Ajax and Server Side Inventory************
+
+npm init - for new node projects (creates package.json)
+npm install - for existing node projects (pulls down dependencies)
+
+new project to do list
+- create files and directories
+- git init
+- npm init --yes
+- npm install express --save
+- create .gitignore file and add node_modules
+- npm install body-parser --save
+
+// these work the same for path
+// declare path as a variable
+path.jon(__dirName, '.public/views/index.html') // two underscores
+path.resolve( 'public/views/index.html') 
+
+git dif shows whats different
+
+
+body-parser allows the server to use the data the client sends
+app.use(bodyParser.urlencoded({ extended: true })); 
+// extended true is used for objects deeply nested
+
+
+res.sendStatus(201); // 202 means accepted 201 means created
+
+
+ */
+
+/********************** Group Activity and Questions *********************
+
+- What is a module
+    - a bit of code that would be useful in multiple projects
+
+var moduleName = require( './modules/moduleName' );
+// this sets the moduleName variable to the value of the return
+
+
+module 1 and module 2 will feed module 3 and then tell the server which will have the client log or display the results on the dom
+
+
+*/
+
+
+
+
+/* Week 2 - Wednesday */
 
 /*******************Lecture Block: Node Modules******************
  
@@ -180,7 +290,7 @@ $(document).ready(onReady);
 
 
 
-/* Week 2 - Monday */
+/* Week 2 - Tuesday */
 
 /******************Live Solve - Code Challenge Week 1******************
 
