@@ -1,3 +1,42 @@
+/* Week 2 - Friday */
+
+/************* Lecture Block: Routers **************
+
+make a directory for routes (similar to modules) on the base project folder
+    - index.js
+
+routers are technically modules, but only have to do with routing
+
+to refrence a route you need to create a require and a use in the server file
+
+********** code example *********
+// Requires
+var express = require('express');
+var path = require('path');
+
+// Makes this a router
+var router = express.Router();
+
+// could also skip declaring express and combine the express and router declaration
+// var router = require('express').Router();
+
+//app.get here
+//base url
+router.get('/', function (req, res) { // change this to router
+    res.sendFile(path.resolve('public/views/index.html'));
+}); // end base
+
+// export
+module.exports = router;
+************************************************
+
+
+
+
+ */
+
+
+
 /* Week 2 - Thursday */
 
 
@@ -53,7 +92,7 @@ minnebar - happens every 6 months
 ** websites of interest **
 - minnestar.org
 - tctech.events (links are often broken and dates are often wrong, but is a good list of events)
-
+- front end masters
  
 
 
