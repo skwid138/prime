@@ -1,4 +1,72 @@
+/* Week 3 - Monday */
+
+/******************** Weekend Challenge Live Solve 2 *****************
+
+- you can npm install multiple modules at once
+mpn install body-parser express --save
+
+* dev nests the routes folder inside modules folder
+
+if doing a use in a router (body-parser example)
+var bodyParser = require('body-parser');
+router.use( bodyParser.urlencoded( {extended: true } ));
+
+* dev names route variables as their name instead of nameRouter
+
+* without putting a res.send or res.sendStatus the ajax success would not get triggered 
+
+- I sent back an array of objects, dev sent back an object with the array as a property and value
+* the reason to do this is it allows you to send back multiple things (status code and an array)
+* also if the response is just a number it may be interpreted as a status code
+
+- hard codding html in the output section first is a helpful way to remember to empty the container
+example: <p>output should go here</p>
+
+- when sending an object with the array of object the loop will be different
+i < response.people.length
+response.people[i].name
+
+** Hard Mode ** 
+- remove loop in getPeople
+- var in success of getPeople to display first person in array
+- var in success of getPeople for count index/response.people.length
+- if to do something if array has 0 people
+- global variable for index (use this in response.people[index].name)
+- display (index + )1 / response.people.length
+- move all this code into it's own function because it would only work on a successful get and it needs to work on button clicks
+- add new function name as a call in success of getPeople so it still does happen on the get
+- send response.people as an argument into the new function (lets call it showPerson)
+- this will send just the array so the references to the array need to be updated (no longer an object with an array of objects)
+- variables for button elements (prev and next)
+- variable for controls
+- append buttons to controls
+- append person to output
+- append count to output
+- append controls to output
+
+- event listener for each new button linking to a function for prevPerson or nextPerson
+
+- nextPerson func
+- increment index (index ++)
+- show next person (the above acomplishes both)
+- wrap
+
+- prevPerson func
+- index -- 
+- the above shows prev person and fixes index, does not wrap
+
+*/
+
+
 /* Week 2 - Friday */
+
+/**************** Weekend Home Work ************
+
+
+
+
+
+*/
 
 /************* Lecture Block: Routers **************
 
