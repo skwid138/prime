@@ -1,6 +1,165 @@
+/* Week 3 - Tuesday */
+
+/************** Lecture Block: What is a Database? and pSQL Basics ************
+
+- Persistance - https: //en.wikipedia.org/wiki/Persistence_(computer_science)
+in cs refers to characteristics of state that outlives the process that created it
+
+    - state - https: //en.wikipedia.org/wiki/State_(computer_science)
+    a program is described as stateful if it is designed to remember preceding events or user interactions; the remembered information is called the state of the system.
+
+    - process - https: //en.wikipedia.org/wiki/Process_(computing)
+     is an instance of a computer program that is being executed.It contains the program code and its current activity.
+
+- a DBs main job is to hold onto state
+- using a DB with our server should mean less reboots and more dynamic information
+
+to list DBs from terminal start 'psql', then enter 'l'
+
+
+These two types of DBs are the kind we'll be using
+- relational DB (SQL)
+    - Many tables that can reference each other in a cascading layout
+    - relate to each other with unique ids
+    - predefined schema
+    - tables with entities
+
+- non-relational DB (NO SQL)
+    - large json file (no tables)
+    - more flexible types
+    - no predefined schema
+
+- schema - defines what tables are, what data is in them, and how they relate to each other
+- result set - is the data returned from a query
+
+ERD (entity relational diagram)
+** Table and row example **
+Users
+- ID (serial #) - postgres makes these automatically (if we setup the schema correctly)
+- Username (varchar)
+- Active (boolean)
+- Created (timestamp type)
+
+- varchar - means string type of data
+    VARCHAR(length here as a number)
+    ie VARCHAR(20) throws error if longer
+
+can setup schema so it only accepts certain data types in columns (varchar, boolean, int, timestamp, etc.)
+modifiers can also add constraints to input (not null, unique, primary key, etc.)
+
+Can set defaults to input fields (like setting the active boolean to true when a new row is added)
+
+following along in postico (users DB)
+- keyword does not need to be caps, but it's good practice
+-query
+
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(20) UNIQUE,
+    active BOOLEAN DEFAULT true,
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+click Execute Statement
+CMD R or click refresh button on the top to view newly create table
+once viewing the table you can view the structure(button on bottom)
+
+** CRUD **
+    Create - REST side POST | DB side Insert
+    Read - REST side GET | DB side Select
+    Update - REST side PUT | DB side Update
+    Delete - REST side Delete | DB side Delete
+
+Queries can be left on screen
+
+comments are created by 
+-- [comment here]
+
+highlighted query is what runs on execute - may highlight several 
+
+it may remember historical queries, but don't rely on it
+
+varchar - can accept caps and lower case
+
+following along in postico(users DB)
+--INSERT
+
+INSERT INTO users(username, active) VALUES('hunter', true);
+INSERT INTO users(username, active) VALUES('Guy', true);
+INSERT INTO users(username, active) VALUES('Ethan', false);
+
+--SELECT Examples
+SELECT * FROM users;
+    The above select selects all the records in the users table an alternative is to list out columns separated by commas, like below
+SELECT username, active FROM users;
+
+WHERE - additional conditions can be added
+
+SELECT * FROM users WHERE active = true; 
+ - this looks through all the rows in the users table and returns the active users 
+
+SELECT * FROM users WHERE username LIKE 'ra%';
+    This looks for usernames that start with ra and end with a 'wildcard'
+
+<> is the the opposite of equals
+!= is the opposite of equals
+
+SELECT * FROM users WHERE active = false AND username = 'Ethan';
+    shows records that have active set to false that also have a username of Ethan
+SELECT * FROM users WHERE active = true OR username = 'Ethan';
+    shows records that have active set to true and also show records that have a username of Ethan
+
+--IN
+SELECT * FROM users WHERE username IN('Ethan', 'hunter');
+    lets you search for multiple things
+
+--Alias changes column names in result set
+SELECT username AS 'USERname' FROM user;
+
+--Order By
+SELECT * FROM users ORDER BY username;
+    returns the rows in alpha order
+
+SELECT * FROM users ORDER BY username ASC;
+    assecnding 
+SELECT * FROM users ORDER BY username DESC;
+    decending
+
+--LIMIT
+SELECT * FROM users LIMIT 4;
+    only shows 4 records
+
+
+
+
+
+
+
+ */
+
+
+
 /* Week 3 - Monday */
 
+
+/*************** Code Challenge Live Solve *****************
+
+do not need to use an unamed function to call a defined function on success
+- can just put the function name without ()
+** example success: getCats
+
+
+throttle network through console > network and then upper right hand side
+
+
+
+
+
+ */
+
+
 /******************** Weekend Challenge Live Solve 2 *****************
+ https: //github.com/devjanaprime/canopusWeekend2ChallengeLiveSolve
 
 - you can npm install multiple modules at once
 mpn install body-parser express --save
@@ -54,6 +213,9 @@ response.people[i].name
 - prevPerson func
 - index -- 
 - the above shows prev person and fixes index, does not wrap
+
+** could use if else for wrapping... I think
+** could also use if with or operator to check for null values of inputs too
 
 */
 
