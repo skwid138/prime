@@ -1,4 +1,192 @@
+/* Week 4 - Monday */
+
+/************* Weekend Challenge 3 Live Solve **************
+
+
+
+ */
+
+/* Week 3 - Friday */
+
+
+/************** Weekend Challenge 3 ****************
+
+https://nakupanda.github.io/bootstrap3-dialog/
+
+At the end of a sprint you SHOULD do a retrospective
+- retrospective 
+    - what went well? AKA: Continue
+    - what went poorly? AKA: Stop
+    - what will we do differently going forward? AKA: Start
+
+ */
+
+
+/*************** Discussing Koala Holla, git, SQL, DELETE **************
+git branch - a 
+shows all local and remote branches
+
+When deleteing in SQL do not need to *
+ - DELETE FROM [table name]] WHERE id=$1
+
+ when updating in SQL 
+  - UPDATE [table name] SET [column name]='[value]' WHERE id=$1
+
+Pool connections are threads
+
+a call back function is a function that happens after a call is made (ie pool.connect etc.)
+
+??? You cannot delete sql row data, you can only delete the entire row
+
+ */
+
+
+/* Week 3 - Thursday */
+
+/************** Lecture Block: pg Review, Intro DELETE PUT, branching ****************
+
+compare git branches 
+- git master .. otherBranch
+or
+- git master ... otherBranch
+
+can also compare them on github which has a nice visualisation
+
+once ready to merge branch
+- git checkout master
+- git merge otherBranch
+
+merging will typically not be destructive
+    - it would typically add code instead of remove
+
+
+
+for deleteing rows from DB
+- post primary id to client side
+- use req.params
+- delete does not have a body so sending data from the client to the server is done through the URL
+router parameters
+ - using a colon in the url tells it that, that's a data point
+ - req.params - this is an object that's created from the delete route
+ - req.params.[prop] this would access the objects property
+
+
+*/
+
+
+
+/********** Lecture Block: Intro to Bootstrap ***********
+
+getbootstrap.com
+
+link bootstrap and bootstrap theme on index
+can use npm install on bootstrap or download it and link it
+
+defined as a class
+    container - is used to hold elements in a central box on the screen
+    container-fluid - fills the entire screen
+    row - contains columns equal to 12
+    col-md-8 - this makes a medium colum that is 8 columns in width
+        - md is typical for desktop, the size defines break points xs would be used for phones etc.
+    form - lays out labels and input well
+        label - use for="email"
+        input - use type="eamil"
+            class="form-control"
+    button - type="button" 
+        class="btn btn-default" (styles grey)
+        class="btn btn-danger" (styles red)
+        class="btn btn-warning" (styles orange)
+        class="btn btn-success" (styles orange)
+        class="btn btn-info" (styles blue)
+
+    glificon - premade icons for things
+        span class="glyphicon glyphicon-heart" (styles )
+        add the above inside whatever tags you want
+
+
+ */
+
+
+
+/* Week 3 - Wednesday */
+
+/************** Lecture Block: Intro to pg ****************
+ * using last weeks example of server side inventory branched from master to intro-pg
+    - git checkout -b intro-pg
+
+pg is a node module for postgres sql
+    - npm install pg --save
+
+create module to connect to db
+- create modules folder
+- inside modules folder create pools.js
+
+a pool of connections is for multiple clients to connect to the db which makes it the prefered connection method
+
+default port for postgres is 5432
+One pool per project
+
+******** pool.js example ********
+var Pool = require('pg').Pool; // this sets Pool equal to a constructor, the method must be caps
+
+var config = {
+    host: 'localhost', // ip of server
+    port: 5432, // port db is listening on
+    database: 'inventory', // name of db
+    max: 20 // how many clients/connections we want in pool (default is 10)
+};
+
+var pool = new Pool(config);
+
+module.exports = pool;
+***********************************
+
+After pool created, do a commit
+
+then create a schema for the db (table)
+- primary key
+- item (name of item) - varchar(200)
+
+add database.sql to project folder with table adds and comments for others to use
+
+good to test inventory queries prior to adding them to the route
+
+Can't set headers after they are sent
+- this means there are multiple res.send in route, to resolve remove the extra
+
+
+do not want to insert or concatinate js variables into sql queries
+- it could allow for malicous sql to be input
+- instead used parameterized queries 
+
+
+
+
+ */
+
+
+
+
 /* Week 3 - Tuesday */
+
+
+/*********** Taylor Time *************
+
+Summary should be what I'm doing at Prime and what I'd like to do after.
+ - maybe mention strengths from strength finder
+
+ experience description PRIME (will evolve over my time here)
+ - why I came to prime over university or bootcamp
+ - what I am really loving here
+ - recomended length a paragraph or two
+ - use buzz words, don't just list technologies
+
+ Try to make descriptions of other jobs relevant to software engineering
+- bulleted lists are better than long descriptions
+
+Should breakup Job Titles into different positions 
+
+ */
 
 /************** Lecture Block: What is a Database? and pSQL Basics ************
 
@@ -95,7 +283,7 @@ SELECT username, active FROM users;
 
 WHERE - additional conditions can be added
 
-SELECT * FROM users WHERE active = true; 
+SELECT * FROM users WHERE active=true; 
  - this looks through all the rows in the users table and returns the active users 
 
 SELECT * FROM users WHERE username LIKE 'ra%';
@@ -104,19 +292,19 @@ SELECT * FROM users WHERE username LIKE 'ra%';
 <> is the the opposite of equals
 != is the opposite of equals
 
-SELECT * FROM users WHERE active = false AND username = 'Ethan';
+SELECT * FROM users WHERE active=false AND username='Ethan';
     shows records that have active set to false that also have a username of Ethan
-SELECT * FROM users WHERE active = true OR username = 'Ethan';
+SELECT * FROM users WHERE active=true OR username ='Ethan';
     shows records that have active set to true and also show records that have a username of Ethan
 
 --IN
 SELECT * FROM users WHERE username IN('Ethan', 'hunter');
     lets you search for multiple things
 
---Alias changes column names in result set
+--ALIAS changes column names in result set
 SELECT username AS 'USERname' FROM user;
 
---Order By
+-- ORDER BY
 SELECT * FROM users ORDER BY username;
     returns the rows in alpha order
 
@@ -125,13 +313,34 @@ SELECT * FROM users ORDER BY username ASC;
 SELECT * FROM users ORDER BY username DESC;
     decending
 
---LIMIT
+-- LIMIT
 SELECT * FROM users LIMIT 4;
     only shows 4 records
 
+-- UPDATE
+SELECT * FROM users username = 'hunter';
+UPDATE users SET username = 'hunter138' WHERE username = 'hunter';
+    DO NOT need to select first, but you can use that query after the update to confirm it worked
+    this looks in the users table, the username column for 'hunter' then updates it to 'hunter138'
 
+SELECT * FROM users WHERE active = true;
+UPDATE users SET active=false WHERE active=true;
+    this sets all active users to false
 
+** There is no undo **
 
+-- DELETE
+SELECT * FROM users WHERE id=5;
+DELETE FROM users WHERE id=5;
+    deletes the row that contains id 5
+
+-- Aggregate Functions
+SELECT COUNT(username) FROM users;
+SELECT * FROM users;
+SELECT MAX(id) FROM users;
+SELECT MIN(id) FROM users;
+
+    Aggregate Functions are a way to pass some of the workload to the DB instead of the server or your code.
 
 
 
