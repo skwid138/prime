@@ -1,8 +1,92 @@
+/* Week 4 - Tuesday */
+
+/*********** Intro to Data Modeling ************
+
+Entity is a unit in a table that can be related to
+
+Relationship Types
+- 1 to 1 (ssn to person, state to capital)
+- many to many (library to rare books, cohort to students)
+- 1 to many (pet to owner, books to authors)
+
+1 to many 
+- changing the id of the related DB loses history, but avoids duplication
+- to track history (use many to many)
+
+many to many
+- needs a hidden table (called a join table or junction table)
+- the junction table is often omitted in ERD drawings
+- the function table will list the relational ids of other tables
+- the junction table can repeat ids
+- one junction table per relationship (so typically to relational ids per junction table)
+- if there are more columns they should only relate to the relationship of the two tables
+
+
+** Group Activity **
+Employer Table (1-M) Jobs Table
+Jobs Table (M-M) Skills Table (junction table)
+Talent Table (M-M) Jobs Table (junction table)
+Talent Table (M-M) Skills Table (junction table)
+Talent Table (M-1) Employer Table
+
+ */
+
+
 /* Week 4 - Monday */
+
+/*************** Angular ***************
+
+- source before script like jq
+
+app - angularmodule - link to html elements
+controller - link to html elements (each word caps and then abreviate as just caps in html)
+ng expression - {{}} in an html doc is an angular expression
+ng-model
+ng-report
+ng-click
+
+
+
+ */
+
+/************* Code Challenge 3 *******************
+
+// in package.json the npm install will create this DB and execute the treats.sql file
+ "postinstall": "createdb treatsDB; psql -d treatsDB -f treats.sql;",
+
+ */
 
 /************* Weekend Challenge 3 Live Solve **************
 
+.gitignore
+node_modules
+*.DS_Store
+*.log
 
+instead of making a base route you can put index.html in public folder instead of views 
+then make public static it will automatically serve index (this is just as good as making the route)
+
+
+for attribute on a table need to be the same as an inputs id
+    - this makes sure the label is associated with the input
+
+// this is the minimum needed for pool
+module.exports = new POOL({
+    database: '[db name]
+});
+
+// formats the entire file to fix tabs etc
+opt shift f
+
+AJAX utility function
+$.get('/tasks', function (res) {
+
+});
+
+
+can pass $(this) as a function argument
+
+can have DB sort data based on values
 
  */
 
