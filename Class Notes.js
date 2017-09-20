@@ -1,5 +1,107 @@
 /* Week 4 - Tuesday */
 
+
+
+
+
+/**************** Lecture Block: pSQL Joins ****************
+    https: //github.com/mhwalsh/lecture-guides/blob/master/sql-joins.md
+
+** Join only reads data, it does not make a new table or edit existing tables, 
+    it builds a temporary table to return for your query
+
+SELECT * FROM left_table type JOIN right_table ON left_id=right_left_id;
+or
+SELECT * FROM staff [type] JOIN lectures ON staff_id=lectures_staff_id;
+    - selects all things from the staff table [default type is INNER, if left blank] with the lectures table
+        where column name is the same as column name
+    For the example it would return all lectures associated to a staff members primary key
+
+
+You can connect as many tables together as you need by chaining joins;
+
+- ON DELETE CASCADE 
+    - this can be added to columns on creation so when 
+    referenced things are deleted it will clean up junction tables
+
+- ON DELETE NULL 
+    - this sets a reference  back to null if the referenced table row is deleted
+
+ADD COLUMN after table creation
+- ALTER TABLE table_name ADD column_name column - definition;
+
+LEFT JOIN
+    - will return all values from left table and if they are not refrenced in the right table the values will show as null
+
+** This shows that you can select multiple tables and columns with dot notation    
+SELECT leftTable.columnName, rightTable.columnName
+FROM AtableName
+
+The data that comes after the select is whats actually getting returned 
+
+Can also add a WHERE clause on the end to further limit the returned data
+
+Can use agragate functions after the SELECT as well for example SELECT COUNT(*) ....
+- this would return a number of how many rows are returned
+
+After a join the right table is technically the left (if another join is used)
+
+
+When adding new rows we'll want to return the id so it can be used in other referenced tables
+INSERT INTO tableName (columnName) VALUE ([valueHere]) RETURNING id; 
+- could also return *
+- The result object in pg would be the id
+- then you could run another query to INSERT rows into the related tables
+
+ */
+
+
+
+/* Week 4 - Tuesday */
+
+
+/***************** Lecture Block: More Angular ********************
+ https: //github.com/devjanaprime/canopusNG
+
+ https: //github.com/Giphy/GiphyAPI
+
+ https: //github.com/devjanaprime/giphyNgServices
+
+canopusNG repo
+
+$http - a service in angular                       |
+- requires dependency injection to use             v
+- myApp.controller('ReviewController', function ($http) {
+
+- 
+
+ */
+
+
+/**************** Taylor Time ******************
+
+Linked In
+    write recomendations for others
+    - keep it to about a paragraph
+    - when you request someone else to write one let them know you're 
+      writting them one as well and what you'll cover
+    - 
+
+    Connections
+    - always add a note
+
+    Certifications
+    - team treehouse (there is an option to share on linked in)
+    - code acadedemy (exclude prework courses)
+
+    Following Companies
+    - start following companies I like (use google docs)
+
+
+
+
+ */
+
 /*********** Intro to Data Modeling ************
 
 Entity is a unit in a table that can be related to
