@@ -1,7 +1,63 @@
-/* Week 4 - Tuesday */
+/* Week 4 - Thursday */
+
+
+/************* $Scope and More Angular **************
+
+https: //github.com/mhwalsh/lecture-guides/blob/master/angular-scope.md
+
+using scope does not allow you to use the same name for a nested controller (probably saying this wrong)
 
 
 
+
+ */
+
+
+
+/* Week 4 - Wednesday */
+
+
+/************** Lecture Block: VS Code Debugging, POST MAN, Nodemon ************
+
+nodemon - node demon
+- from terminal enter: nodemon server.js
+- it reboots your server as soon as a change is made
+
+POST MAN
+- for testing routes(APIs) before building the client side
+- best for use with POST, PUT, DELETE
+** Would be a good idea to start doing server side setup first then testing with POST MAN
+
+VS Code DeBugger
+- Click Geear with orange dot
+- set program to server file "program": "${workspaceRoot}/server.js"
+- Add Configuration (node.js attach)
+- change drop down to launch program
+- click play
+
+sources in chrome dev tools is similar to the debugger
+
+*/
+
+
+/************** Lecture: $http POST ***************
+
+JQ - NG
+$.ajax - $http
+success - .then
+
+bodyPArser.urlencoded - bodyParser.json()
+
+if the post res is undefined then it needs bodyparser.json
+
+ng-init""RC.getBAnds()" - in the HTML
+- same as calling getBands() in the script
+
+Things to checkout
+- angular animate
+- angular js tricks
+
+ */
 
 
 /**************** Lecture Block: pSQL Joins ****************
