@@ -80,7 +80,7 @@ You can connect as many tables together as you need by chaining joins;
     - this can be added to columns on creation so when 
     referenced things are deleted it will clean up junction tables
 
-- ON DELETE NULL 
+- ON DELETE  SET NULL 
     - this sets a reference  back to null if the referenced table row is deleted
 
 ADD COLUMN after table creation
