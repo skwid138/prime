@@ -1,3 +1,29 @@
+/* Week 5 - Monday */
+
+/*************** Weekend Challenge 4 Live Solve *****************
+
+/Users/hunter/Repos/prime/Projects/canopusWeekend4LiveSolve
+
+https: //github.com/devjanaprime/canopusWeekend4LiveSolve
+
+$index in ng repeat keeps track of the iterations of the loop (or repeat)
+    make a function and then pass it $index 
+        vm.toggleMe ($index) {
+            // do something
+        }
+
+ng-hide / ng-show
+    these share a single boolean so they can be used together to toggle things.
+
+
+It is best practice to keep logic in the script rather then on the html
+
+
+
+*/
+
+
+
 /* Week 4 - Thursday */
 
 
