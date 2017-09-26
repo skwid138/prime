@@ -1,5 +1,126 @@
 /* Week 5 - Monday */
 
+/****************** Angular Program Structure and Angular Router ***************
+ 
+https://github.com/mhwalsh/lecture-guides/blob/master/angular-router.md
+
+AKA client side routing
+
+** new directory layout **
+Public
+    Views
+    Scripts
+        Services
+        Controller
+            controller.js
+    Styles
+    Vendors
+    index.html
+
+Angular Router must be npm installed
+
+npm install angular-route
+
+Millie installs angular, and angular-route using npm and then copies them to vendors
+
+When sourcing files on index.html do them in this order
+
+angular
+angular route
+client.js - must source before controllers
+controller 1
+controller 2
+
+ng-view
+- an html element that indicates where content can be dynamically swapped in and out
+    <ng-view></ng-view>
+
+**** client.js ****
+myApp.config(function($routeProvider) {
+    $routeProvider.when('/' {
+        templateUrl: 'views/home.html'.
+        controller: 'HomeController as hc'
+    })when('/blue', {
+        templateUrl: 'views/blue.html',
+        controller: 'BlueController as bc'
+    }.otherwise({ redirectTo: '/'}); 
+});
+
+**** home.js ****
+myApp.controller('HomeController', function( ) {
+    console.log('in HomeController');
+});
+
+**** home.html ****
+<!-- does not need the controller here as it is assigned on client.js -->
+<section>
+    This is a home page
+</section>
+
+**** blue.html ****
+<section>
+    This is a blue page
+</section>
+
+**** index.html *****
+<nav>
+    <li>
+        <a href="!#/blue">blue</a>
+    </li>
+    <li>
+        <a href="!#/">home</a>
+    </li>
+</nav>
+<ng-view></ng-view>
+
+
+# is used to show client routes in the url
+localhost:5000/#/ = home
+
+!#/ is used on anchor elements in the nav to reference the routes
+
+
+Remove # in the URL
+    ** keep in mind that this will not distinguish server side routes vs  client side routes
+
+**** index.html ****
+
+<base href="/";
+<!-- update nav bar -->
+
+
+**** client.js ****
+// add $locationProvider as a parameter of myApp.config
+myApp.config(function($routeProvider, $locationProvider) {
+
+})
+
+// after otherwise 
+$locationProvider.html5Mode(true);
+
+**** server.js ****
+// add path
+var path = require('path');
+
+// all routes are handled by this if there are not other routes above it in the file
+app.get('/*', function(req, res) {
+    res.sendFile(path.resolve('index.html'));
+});
+
+
+alternate config properties
+tempalte: '<div>html here</div>,
+controller: 'ControllerName',
+controllerAs: 'cn'
+
+
+
+ */
+
+
+
+/* Week 5 - Monday */
+
 /*************** Weekend Challenge 4 Live Solve *****************
 
 /Users/hunter/Repos/prime/Projects/canopusWeekend4LiveSolve
@@ -18,7 +139,12 @@ ng-hide / ng-show
 
 It is best practice to keep logic in the script rather then on the html
 
+It really helps to make a list of what needs to be done and then make smaller lists for each list item so you can continue to see progression rather than feeling stuck
 
+
+Heroku
+ app.listen(process.env.PORT || 5000);
+  -- Heroku picks a random port, so specifying one doesn't quite cut it. This line allows for heroku & localhost functionality.
 
 */
 
