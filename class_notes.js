@@ -1,5 +1,128 @@
 /* Week 5 - Wednesday */
 
+
+/*************** Intro to Mongoose **************
+
+npm install mongoose --save
+
+create a js file for schema
+
+
+POSTMAN
+use server url
+send raw JSON files after routes setup
+
+
+[name]Shema.js
+
+**** [name]Shema.js ****
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema
+
+// creating new schema
+// name of fields/property : type and any requirement
+new Schema({
+    name: String, // if just defining the type then only needs the type
+    username: {type: String, unique: true, required: true}, // this is a unique string so it takes an object
+    admin: Boolean,
+    meta: { // this is a sub document 
+        age: Number, // property of my choosing, but Number defines the value
+        website: String
+    },
+    created_at: new Date()
+})
+
+// 1st param is collected
+// 2nd param is
+
+var User = mongoose.Model('users', userSchema);
+
+**** server.js ****
+var express = require('express');
+var app = express();
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+var userRouter = 
+// this line is not needed as it's used in the schema
+var mongoose = require('mongoose');
+
+// this creates the DB if it does not already exist
+// may not create DB until something is inserted
+mongoose.connect('mongodb://localhost:2717/canopusUserDb');
+// the .connect method is old now
+
+app.listen(3000, function(){
+    console.log('listening on: 3004');
+});
+
+
+***** userRouter.js ****
+var router = require('express').Router();
+// pull in User schema 
+var User = require('../models/userSchema');
+
+router.get('/', function(req, req) {
+    console.log('in user get route');
+
+    User.find({}, function(err, userResults) {
+        if(err){
+            console.log('get error ', err);
+            res.sendStatus(500);
+        } else{
+            console.log('userResults, userResults);
+            res.send(userResults);
+        }
+    }) 
+})
+
+// PUTTING A ? after /:username? makes the param optional
+// could use this in conjunction with an if else to change the query string
+
+router.get('/:username', function(req, req) {
+    console.log('in user get route');
+    var searchName = req.params.username;
+    User.find({username: searchName}, function(err, userResults) {
+        if(err){
+            console.log('get error ', err);
+            res.sendStatus(500);
+        } else{
+            console.log('userResults, userResults);
+            res.send(userResults);
+        }
+    })
+})
+
+router.post('/', function(){
+    console.log('in user post route');
+    var userAccount = new USER({
+        name: req.body.name,
+        username: req.body.username,
+        admin: req.body.admin
+    });
+
+    console.log(userAccount);
+
+    // saves/inserts user into collection
+    userAccount.save(function(err){
+        if(err) {
+            console.log('User POST error ', err);
+            res.sendStatus(500);
+        } else {
+            console.log('user created!');
+            res.sendStatus(201);
+        }
+    });
+    res.sendStatus(201);
+});
+
+module.exports = router;
+
+
+ */
+
+
 /*********** Mongo DB **************
 
 Install Guide
@@ -28,6 +151,8 @@ SQL tables in mongo are called (or are similar to) collections
 
 PURE MONGO
     from terminal
+    mongo - starts mongo shell 
+    use [db name] - if it does not exist then this also creates the DB
     - db.[collection name].[CRUD Verb]
     create - same as CREATE TABLE in SQL
     insert - same as CREATE and INSERT in SQL
@@ -69,8 +194,6 @@ PURE MONGO
 
 MONGOOSE
     SAVE - same as CREATE in SQL or INSERT in Pure Mongo
-
-
 
 
  */
