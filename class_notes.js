@@ -1,4 +1,170 @@
-/* Week 5 - Monday */
+/* Week 5 - Wednesday */
+
+/*********** Mongo DB **************
+
+Install Guide
+https://github.com/mhwalsh/lecture-guides/blob/master/mongo-install.md
+
+Intro Guide
+https://github.com/mhwalsh/lecture-guides/blob/master/intro-mongo.md
+
+Mongo Documentation
+https://docs.mongodb.com/manual/core/document/
+
+
+Pure Mongo
+- does not use a schema
+- very flexible
+
+Mongoose
+- More of a middle ground between SQL and Mongo
+- allows defined data types
+- supports a schema
+
+DOCUMENTS
+SQL rows in mongo are called (or are similar to) documents
+COLLECTIONS
+SQL tables in mongo are called (or are similar to) collections
+
+PURE MONGO
+    from terminal
+    - db.[collection name].[CRUD Verb]
+    create - same as CREATE TABLE in SQL
+    insert - same as CREATE and INSERT in SQL
+    find - same as SELECT in SQL
+        find({[object with dot notation or object in an object]}) - same as WHERE in SQL
+    update - same as UPDATE in SQL
+    deleteMany - similar to DELETE in SQL
+    deleteOne  - similar to DELETE in SQL
+    remove - similar to DELETE in SQL
+
+    uses JS objects
+    db.users.insert(
+        {
+            username: "hunter138",
+            active: true,
+            created: new Date(),
+            name: {first: "hunter", last: "rancourt"}
+        }
+    );
+
+    .find().pretty() - this makes the terminal much easier to read
+
+    $and - similar to AND in SQL
+        db.users.find( { $and: [{"name.first": "millie"}, {"name.last": "walsh"} ] } );
+
+    $or - similar to OR in SQL
+        db.users.find({$or: [ {age: 27}, {username: "john7"} ] });
+
+    $exists
+        db.users.find({family :{$exists: true}});
+
+    $gt - selects things with a value greater than
+        db.users.find({age: {$gt:20}});
+
+    $lt - selects things with a value less than
+        db.users.find({age: {$lt:60}});
+
+
+
+MONGOOSE
+    SAVE - same as CREATE in SQL or INSERT in Pure Mongo
+
+
+
+
+ */
+
+
+
+/* Week 5 - Tuesday */
+
+/********** High Five Off **********
+
+characters are assigned a skill (random num gen on service)
+Button to high five them (random number gen to compare with character skill on service?)
+how many succesful high fives for each char( on characters controller)
+how many total high fives (on service)
+
+RANDOM NUM GEN (same func)
+on page load generate char skill
+on button click generate quality
+
+ */
+
+
+/**************** Angular Services **************
+
+View Controller Model
+    View - what user sees
+    Controller - connection between DOM(view) and service(Model)
+    Model - shared data, $http (talks to server)
+
+In services directory
+**** thing.service.js ****
+myApp.service('ThingService', function( ) {
+
+    var vm = this; (commonly written as var self = this;)
+
+    // static
+    vm.array = [1, 2, 3];
+
+    // dynamic - must be in an object
+    vm.countObj = {count: 0};
+
+    vm.incCounter = function( ) {
+        vm.countObj.count ++;
+    };
+
+});
+
+Source services before controllers after client.js on index.html
+- this doesn't make a difference in practice, but logically it makes sense
+
+from a controller the array can be referenced by injecting it into the anonymos function
+**** controller.js ****
+myApp.controller('ControllerName', function( ) {
+    var vm = this;
+    // sets the value of the service to a value of the controller
+    vm.array = ThingService.array;
+
+    vm.countObj = ThingsService.countObj;
+
+    vm.clickUpdate = function( ) {
+        ThingsService.incCounter();
+    }
+
+});
+
+
+DYNAMIC DATA MUST BE IN AN OBJECT
+
+
+to get info from server use service
+
+self.serverThings = {list: []};
+
+$http.get('serverThings').then(function(response) {
+    self.serverThings.list = response.data;
+});
+
+
+
+ */
+
+/******************* Taylor Time **********************
+
+Twitter 
+- have a professional account
+- follow others in dev community
+- don't have things public that you are not willing to talk about
+Example: antoinette smith (code switch, blacks in tech)
+
+Slack
+- a lot of meetups have slack channels
+
+
+ */
 
 /****************** Angular Program Structure and Angular Router ***************
  
