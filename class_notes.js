@@ -1,3 +1,43 @@
+/* Week 5 - Thursday */
+
+/***************** Full Stack W/ Angular and Mongo *******************
+
+
+
+
+
+ */
+
+/****************** Deployment with Heroku ***********************
+
+https://devcenter.heroku.com/articles/heroku-cli
+
+From Terminal
+    heroku login - prompts for credentials
+    heroku create [app name] - creates a heroku.app
+    heroku open - should open the app in the browser
+    heroku logs --tail(or -t)  - waits for new logs to come in and keeps adding them to the log as they come in
+
+    git remote -v  - will now show both git urls and 2 heroku urls
+
+    git push heroku master  - this will push to the heroku repo
+
+
+    after pushed, then the port needs to be updated on server.js
+    heroku gives us a port and puts it in an environment variable
+    depending on the environment the port can dynamically change
+    .env files
+    or on heroku it happens automatically so no file creation is needed
+
+    var port = process.env.PORT || 6660;
+
+Error R10 (boot Timeout) - 
+
+
+
+ */
+
+
 /* Week 5 - Wednesday */
 
 
