@@ -1,6 +1,74 @@
+/* Week 5 - Friday */
+
+/************ Weekend 5 challenge *************
+
+
+
+
+ */
+
+
+/************** Angular Materials Intro **************
+
+https://material.angularjs.org/latest/
+https://material.angularjs.org/1.1.0/getting-started
+
+Angular Materials is a styling framework designed by google (who also designed angular)
+
+Likely similar to ui.bootstrap (the NG bootstrap module)
+
+There are five files to source on index.html
+- css file and 4 js files
+
+Unlike bootstrap which uses rows and columns NG materials uses a "flex system"
+
+https://material.angularjs.org/latest/layout/introduction
+<div layout="column">
+    - anything inside of this would be aligned in a column dynamically
+<div layout="row" layout-xs="column">
+    - rows should be insdie columns, but can also have dynamic sizes that change them into columns
+    - it's a good idea to add height to the divs otherwise they'll only be as big as their contents
+
+layout-align="center center"
+    - this centers the element horizontally and vertically
+
+https://material.angularjs.org/latest/demo/dialog
+$mdDialog - this is a dialog box that is built into materials
+    - this needs to be bassed into the controllers anonymous func
+$event - on html page is used to capture an event (like click, etc.)
+#popupContainer
+    - this is a styling id that is passed into the querySelector method in the controller
+    - The line above is a bit cryptic so google it!
+    - targetEvent(event) - this is how the controller function is triggered
+
+https://material.angularjs.org/latest/demo/toast
+Toast
+    - similar to dialog
+
+
+
+
+ */
+
+
+
 /* Week 5 - Thursday */
 
+/************* Group Project: Riddler ****************
+
+
+
+ */
+
 /***************** Full Stack W/ Angular and Mongo *******************
+
+Setup Interface, html with NG
+- test buttons
+- toggle message(note) input
+- test ng-repeat (before connecting to DB or server with client side(controller) array)
+
+ng-if="MC.name" on section, hides the section unless a name has been entered
+- in this instance ng-show would work the same way.
 
 
 
@@ -11,6 +79,8 @@
 /****************** Deployment with Heroku ***********************
 
 https://devcenter.heroku.com/articles/heroku-cli
+
+https://github.com/mhwalsh/lecture-guides/blob/master/heroku-pSQL-deploy.md
 
 From Terminal
     heroku login - prompts for credentials
