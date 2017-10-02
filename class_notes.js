@@ -1,3 +1,34 @@
+/* Week 6 - Monday */
+
+/************** Weekend 5 Live Solve ****************
+https: //github.com/PrimeAcademy/canopus-weekend-5-live-solve
+
+One Controller per view
+
+One Service per table or collection
+
+npm init -y (should already know this, but I always seem to forget, it saves you from answering all the questions)
+
+as long as there is an index.html file in the static folder location on server.js then now app.get or router.get is needed to serve the html file
+
+The full versions of angular and angular routes may make debugging easier and are recomended for development
+
+Can test myApp.config routes by using template w/o controllers to test if the client side routes are working
+
+ng-href - waits until ng is loaded before setting the link
+
+setting otherwise to 404 could be a handy way to see if the otherwise route is being hit
+
+from the DB route
+listingins.find().then(function(results))
+// this will get everything in the collection after that is completed THEN is runs the callback
+
+luke puts {{controllerName}} in the templateUrl html doc while setting everything up so he knows it's all being passed from jump to jump
+
+ */
+
+
+
 /* Week 5 - Friday */
 
 /************ Weekend 5 challenge *************
