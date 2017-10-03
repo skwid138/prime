@@ -1,3 +1,77 @@
+/* Week 6 - Tuesday */
+
+/***************** APIs and Request Library *****************
+
+
+
+ */
+
+
+/************** Taylor Time ****************
+
+Salary negotiation
+- most companies are not going to low ball you, most will (assuming it's reasonable) will give to the higher end of your range
+- range should never be more than 7k
+- range should be odd numbers (51K-56K sounds better to the employer than 50k-55k)
+- salary is more then the pay
+    - mentors
+    - travel
+    - benefits (insurance, etc.)
+    - PTO (very easy to negotiate as it doesn't effect the team's budget, it hits the company)
+
+- If an application asks for previous salary enter $1
+- If an application asks for range also enter $1 (signals you want to have a conversation)
+- If interviewer asks for previous salary (even if it's good) thank them for the question and tell them skills that you have and used there
+
+- average prime grad makes 57k at their first job
+- bell curve is 55-65
+
+- While negotiating, tell them what you want, but not why. Just say it and shut up
+
+- 
+
+Starup Week
+ - create some goals
+    - get contact info for 3 people in tech 
+    - learn a new technology 
+    - etc
+
+After Prime
+- to use taylor must complete all assignments
+- list of things to complete before grad to receive career support
+- keep coding, but in small amounts so you can show off your work
+- it's almost better to keep starting new projects as it's easier to show off work of multiple projects then show progress of one larger project
+
+Most common skills in MSP or What do most prime students learn next/use in their first job
+ - have to find this on my own
+
+Clean github
+- good naming convention
+- good descriptions
+- READMEs on all repos
+
+example: https: //github.com/geekyBrewster
+
+
+
+** Wand - makes POS software (local to MSP)
+
+ */
+
+
+/*************** Code Challenge Live Solve **************
+
+It's best practice to wrap functions from services that are being called on controllers in a function local to that controller
+
+how to sort backwards through DB response using angularjs and ng-repeat
+- | orderBy : "-_id"
+or!
+- | orderBy : '-'
+
+
+ */
+
+
 /* Week 6 - Monday */
 
 /************** Weekend 5 Live Solve ****************
