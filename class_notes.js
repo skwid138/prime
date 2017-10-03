@@ -28,6 +28,25 @@ What will change with authentication.
     - check if user is valid
 
 
+1. initial request/login
+    - login page that gathers username and password to hand to server
+    - server will validate username and password
+        - does user exist?
+        - does users password match?
+    - if valid serialize user 
+        - user id is encrypted or hashed and called a "token"
+    - if invalid return to login page (be obscure in errors, 'invalid username or password')
+    - set cookie that contains token
+
+2. Subsequent Requests
+    - request is made
+    - does the user have a session / cookie
+    - validate session
+        - if invalid, send to login page
+        - if valid allow request
+
+
+
  */
 
 
