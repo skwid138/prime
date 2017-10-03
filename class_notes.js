@@ -1,5 +1,36 @@
 /* Week 6 - Tuesday */
 
+/**************** Auth Overview ****************
+
+Auth
+    - are valid users in the system
+    - permissions / roles
+
+Types
+    - 2 factor 
+        - 2nd message (multi device)
+    - OAuth2 
+        - use another systems authentication (google, facebook, etc.)
+        - larger companies are typically more secure
+        - 
+    - local 
+        - our server and DB
+
+Putting the authentication on the server prevents headless applications (like postman) from accessing the server without authenticating
+
+
+What will change with authentication.
+    Datamodel
+    - a collection, sub-document, or table to store user data with joins to other tables
+    - SELECT * FROM table_name WHERE user="logged_in_user"
+    - inserting data may need to also insert the data and then the referenced data as well
+    Route
+    - check if user is valid
+
+
+ */
+
+
 /***************** APIs and Request Library *****************
 
 https://github.com/request/request
