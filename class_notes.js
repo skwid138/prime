@@ -2,6 +2,92 @@
 
 /***************** APIs and Request Library *****************
 
+https://github.com/request/request
+
+https://github.com/mhwalsh/lecture-guides/blob/master/deployment-odds-ends.md
+
+client side API request - is an API request from the client side (like the giphy lecture)
+    - publicly visible API key
+
+server side API request - is an API request from the server side
+    - benefits of server side is that the data is hidden
+    - hidden API key
+    - may contain passwords
+
+on server side you can set environment variables with passwords
+    - typically in a hidden file called .env that is in the .gitignore
+
+npm install request --save
+- it is a dependency others will need
+
+token - is an API key
+
+**** server.js ****
+var request = require('request');
+app.get('/', function(req, res) {
+    request('http://www.google.com', function (error, response, body) {
+        console.log('error:', error); // Print the error if one occurred
+        console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+        console.log('body:', body); // Print the HTML for the Google homepage.
+    });
+    // res.sendStatus(200);
+    res.status(200).send(JSON.parse(body));
+});
+
+github lets you create tokens from settings and Personal access tokens
+
+a lot of APIs will not require the options below, but github does
+
+headers - part of a request with authentication info
+
+var options = {
+    url: '',
+    method: 'GET',
+    headers: {
+        'Authorization': 'Token [token here(long hash #)]', // the spave after : needs to be there
+        'User-Agent': 'someName' // this is something github requires to access user info
+    }
+}
+
+
+res.status(200).send();
+    - allows you to send a status and data
+    - can be chained where sendStatus cannot
+
+
+npm install .env --save
+    - also a dependency of the project
+
+**** .env *****    
+create file locally called ".env" in the root of project directory
+line 1 is the name of the key = the key (name doesn't matter)
+key_name=[hash number here]
+
+**** server.js ****
+// every file that needs .env variables needs this line
+// make env var global to this file
+require('dotenv').config();
+
+var options = {
+    url: '',
+    method: 'GET',
+    headers: {
+        'Authorization': process.env.key_name, // no quotes on this
+        'User-Agent': 'someName'
+    }
+}
+
+
+Good resource for APIs
+    https://www.programmableweb.com/
+
+
+If you haven't pushed and want to overwrite an amend
+git commit -amend
+:wq to exit VIM editor
+
+Heroku Setup Config variables 
+    - can hide .env variables in heroku
 
 
  */
