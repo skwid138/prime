@@ -29,7 +29,7 @@ new Schema
 asdf is a very common password for testing
 
 $http.post('route', object).then(function(resp){
-    console.log('succesful response', resp);
+    console.log('successful response', resp);
 }).catch(function(error){
     console.log('catch error', error);
 });
@@ -66,6 +66,15 @@ app.post('/login', passport.authenticate('local', { //localStrategy.js (below)
 var passport = require('passport');
 require('passport-local').Strategy;
 
+var User = require('..models/userModel');
+
+// this serialized user comes into play with session management, as it stands now, nothing is being done with it
+passport.serializeUser(function(user, done) {
+    console.log('in serializeUser');
+    done(null, user.id);
+}); // end serialize
+
+
 passport.use('local', new Strategy({
     // usernameField defines the filed in the DB that is the key to passport
     usernameField: 'username', // if this was an email it would still need to say usernameField for the property, but it would say 'email'
@@ -74,6 +83,21 @@ passport.use('local', new Strategy({
     }, 
     function (req, username, password, done) {  // done is a callback function inside the callback function
         console.log('inside strategy callback');
+
+        User.findOne({username: username}, function(err, user) {
+            if(!user) {
+                done(null, false, {message: 'Incorrect Credentials!'})
+            } else {
+                // if successful, passport will serialize the user (see above serializeUser method)
+                // if the username matches, then check if password matches
+                if(password === user.password) {
+                    done(null, user);
+                } else {
+                    console.lot('Incorrect Username or Password!');
+                    done(null, false, {message: 'Incorrect Username or Password!'});
+                } // end password else
+            } // end username else
+        }) // end find
 
         //always fail -> done(null, false, {message: 'always failing'}) 
 
