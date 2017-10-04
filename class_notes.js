@@ -28,8 +28,12 @@ new Schema
 
 asdf is a very common password for testing
 
+**** user.service.js *****
+
 $http.post('route', object).then(function(resp){
     console.log('successful response', resp);
+    // sends the user to an authenticated view if there credentials match the DB
+    $location.path('/user'); // can do something similar on a successful register POST
 }).catch(function(error){
     console.log('catch error', error);
 });
@@ -116,6 +120,8 @@ var localStrat = new Strategy({
 
 passport.use('local', localStrat);
 ************
+
+
 
  */
 
