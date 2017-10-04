@@ -58,7 +58,7 @@ app.post('/login', passport.authenticate('local', { //localStrategy.js (below)
 
 
 **** localStrategy.js **** (must be exported and required on server.js, similar to routes)
-// make stretegys dir
+// make strategys directory
 // js file inside it
 // npm install passport-local --save 
 // different package for different types of strategies
@@ -70,13 +70,15 @@ passport.use('local', new Strategy({
     // usernameField defines the filed in the DB that is the key to passport
     usernameField: 'username', // if this was an email it would still need to say usernameField for the property, but it would say 'email'
     // the order of these does not matter, but they do need to be here
-    passReqToCallback: true
-    }), function(req, username, password, done) {
+    passReqToCallback: true // this allows req to be passed into the callback function
+    }, 
+    function (req, username, password, done) {  // done is a callback function inside the callback function
         console.log('inside strategy callback');
 
         //always fail -> done(null, false, {message: 'always failing'}) 
-    }
 
+        } // end strat callback
+    ) // end new Strategy
 ); // end passport.use
 
 module.exports = passport;
