@@ -1,3 +1,100 @@
+/* Week 6 - wednesday */
+
+
+/****************** Passport ******************
+
+http://passportjs.org/docs
+
+https://github.com/PrimeAcademy/canopus-passport
+
+
+Username & Password
+    - click Submit
+Register user function on Controller 
+    - checks is username and password fields have values
+    - create user object if they do have values
+Services takes user object as argument    
+    - POST data to server
+Server route hits schema
+    - server writes user data to DB
+
+
+**** schema.js ****    
+var Schema = require
+
+new Schema
+    username = {type: string, index: {unique: true}}  // syntax is likely wrong, but putting index makes the DB queries faster? I think
+
+
+asdf is a very common password for testing
+
+$http.post('route', object).then(function(resp){
+    console.log('succesful response', resp);
+}).catch(function(error){
+    console.log('catch error', error);
+});
+
+
+**** indexRoute.js **** (must be exported and required on server.js, just like other routers)
+var router = require('express').Router();
+var passport = require('passport');
+
+// if the entire post fails (like if local is not defined, then it throws a 500 error)
+// the authenticate method will automatically send a 401 if unsuccessful
+router.post('/', passport.authenticate('local'), function(req, res) {   // the local strategy must be created for this to work
+    console.log('in POSt');
+    res.sendStatus(200);
+}); // end POST
+
+module.exports = router;
+
+// The way below is okay, but more messy with client side routes and NG
+********
+app.post('/login', passport.authenticate('local', { //localStrategy.js (below)
+    successRedirect: '/',
+    failureRedirect: '/login'
+}));
+********
+
+
+**** localStrategy.js **** (must be exported and required on server.js, similar to routes)
+// make stretegys dir
+// js file inside it
+// npm install passport-local --save 
+// different package for different types of strategies
+
+var passport = require('passport');
+require('passport-local').Strategy;
+
+passport.use('local', new Strategy({
+    // usernameField defines the filed in the DB that is the key to passport
+    usernameField: 'username', // if this was an email it would still need to say usernameField for the property, but it would say 'email'
+    // the order of these does not matter, but they do need to be here
+    passReqToCallback: true
+    }), function(req, username, password, done) {
+        console.log('inside strategy callback');
+
+        //always fail -> done(null, false, {message: 'always failing'}) 
+    }
+
+); // end passport.use
+
+module.exports = passport;
+
+// constructor can be separated as well if it's easier
+************
+var localStrat = new Strategy({
+    usernameField: 'username',
+    passReqToCallback: true
+}); // end Strategy
+
+passport.use('local', localStrat);
+************
+
+ */
+
+
+
 /* Week 6 - Tuesday */
 
 /**************** Auth Overview ****************
