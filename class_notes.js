@@ -1,3 +1,115 @@
+/* Week 6 - Thursday */
+
+/****************** Passport Q&A ****************
+https://github.com/PrimeAcademy/canopus-passport
+
+- adding code to lecture code from wednesday
+
+
+Serialize - makes a the user a cookie on initial request
+
+Application and Network tabs in the dev tools will be great resources for testing sessions and cookies
+
+Sessions
+npm install express-session --save
+
+**** server.js ****
+var session = require('express-session');
+
+app.use(session({
+secret: 'any Random String', // might eventually want to use an environment variable to obscure this at some point
+key: 'user', // token for session
+resave: true,
+saveUninitialized: false,
+// maxage is in miliseconds (shows as expiration)
+cookie: {maxage: 60000, secure: false} 
+})); // end use session
+
+// initialize passport
+app.use(passport.session()); // tells passport to use the session
+
+
+Hash and Salt
+npm install bycryot --save
+
+OG password is salted then hashed and the salt is added to the hash
+
+**** server.js ****
+var SALT_WORK_FACTOR = 10; // default is 10 (this is the number of iterations, the higher the number, the slower and more secure it will be)
+
+
+**** schema.js ****
+
+var user = this;
+
+if (user.isModified('password')) {
+    net();
+}  // end if
+
+bycrypt.getSalt(SALT_WORK_FACTOR, function(err, salt) {
+    if(err) {
+        console.log('salt error');
+    } // end if
+    // takes the field we want to hash
+    bycrypt.hash(user.password, salt, function(err, hash) {
+        if(err) {
+            next();
+        } // end if
+
+        user.password = hash;
+        next();
+    })
+})
+
+// cabdidatePassword iis the password entered by the user
+UserSchema.methods.comparePassword = function(cabdidatePassword, callback) {
+
+    var user = this; // current user object or schema model
+    bycrypt.compare(candidatePassword, user.password, function(err, isMatch) {
+        if(err) {
+
+        }
+
+        callback(null, isMatch)
+    })
+
+} // end compare
+
+
+**** localStrategy.js ****
+
+// EDIT THIS in passport.use('local', new Strategy
+
+User.findOne({username: username}, function(err, user) {
+            if(!user) {
+                done(null, false, {message: 'Incorrect Credentials!'})
+            } else {
+                // if successful, passport will serialize the user (see above serializeUser method)
+                // if the username matches, then check if password matches
+                if(password === user.password) {
+                    done(null, user);
+                } else {
+                    user.comparePassword(password, function(err, isMatch) {
+                        if(err) {
+                            throw err;
+                        } // end if error
+                        if(isMatch) {
+                            done(null, user);
+                        } else {
+                            console.log('invalid creds');
+                            done(null, false, {message: 'Incorrect Credentials'})
+                        } // end else
+                    }) // end comparePassword
+                } // end password else
+            } // end username else
+        }) // end find
+
+
+
+ */
+
+
+
 /* Week 6 - wednesday */
 
 
