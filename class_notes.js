@@ -1,3 +1,7 @@
+/* Week 6 - Friday */
+
+
+
 /* Week 6 - Thursday */
 
 /****************** Passport Q&A ****************
@@ -6,12 +10,25 @@ https://github.com/PrimeAcademy/canopus-passport
 - adding code to lecture code from wednesday
 
 
+Rebooting server will wipe out any active sessions
+    - good for testing session timeout redirects, etc.
+
 Serialize - makes a the user a cookie on initial request
 
 Application and Network tabs in the dev tools will be great resources for testing sessions and cookies
 
 Sessions
 npm install express-session --save
+
+req.logout();
+    - expires session
+    - wrap in a logout route
+    - tie route to button click
+
+
+Code Smell - feeling uneasy or negative about code or the approach of solving an issue
+
+
 
 **** server.js ****
 var session = require('express-session');
@@ -30,7 +47,7 @@ app.use(passport.session()); // tells passport to use the session
 
 
 Hash and Salt
-npm install bycryot --save
+npm install bycrypt --save
 
 OG password is salted then hashed and the salt is added to the hash
 
