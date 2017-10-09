@@ -1,3 +1,57 @@
+/* Week 7 - Monday */
+
+
+/************ Taylor Time *************
+ 
+- recruiters (not at individual companies, but like robert half)
+
+3 Options
+- contract
+    - has a designated time window and typically do not get hired after
+    - get paid by recruitment firm
+- contract to hire
+    - gives the company the opportunity to try the person out and allows the employee to try the company
+    - paid by recruitment firm
+- direct hire
+    - hired directly to company
+
+
+Staffing and recruitment firms also offer insurance (usually cobra)
+
+Come up with annual salary divide by 2080 for hourly, then add 4 dollars for benefits 
+
+DO NOT work with a recruiter that charges you for services
+
+DO NOT apply to a position that a recruiter mentioned (on our own or through another recruiter)
+    - you will likely not get looked at at all for the position
+    - let recruiter know if you've applied to a position already
+
+Track all places I've applied as well as recruiter applying on my behalf
+    - keep track of job id number as titles and descriptions can sound similar
+    - track id, desc, title, recruiter name
+
+DO NOT apply for multiple jobs at one company
+    - looks bad (just pick one, that's most aligned for you or most exciting)
+    - ask hr person about other positions
+
+RED FLAGS
+- asking for money
+- recruiter that reaches out via email(typically)
+    - don't want to meet with you, but just ask if you want to be submitted
+- clear expectations on how to communicate and how often (and they don't hold up their end of the deal)
+- 
+
+Ask recruiter who they work with (what types of companies)
+- I want to work for X can you help me etc.
+
+Being submitted does not mean you'll get a job, an interview, or even your resume looked at
+- should say yes to most places you want to work for
+
+
+ */
+
+
+
 /* Week 6 - Friday */
 
 
