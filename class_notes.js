@@ -1,3 +1,109 @@
+/* Week 7 - Tuesday */
+
+/********************* Unit Testing **********************
+ 
+Uses
+- Regression
+    - testing old code as new code is written to make sure new code isn't breaking old code
+    - may require tests to be updated
+- Planning
+    - writing the test before the code will help round out the though process for approaching an issue
+- Code can outwit people
+- Specific
+
+Writing unit tests for code challenges at prospective employers can be a way to really impress
+
+Automated testing is different than test automation
+    - automated testing is writing code to test other code (typically done by a developer)
+    - test automation is typically a QA thing (not done by dev)
+
+TYPES
+ - Unit tests and Integration tests
+
+Chai Assertion Library
+    - chaijs.org
+    - chaijs.org/api/bdd (shows syntax for should/expect)
+
+    3 library's
+    - Should
+    - Expect
+    - Assert
+
+Circle CI
+- tool for running unit tests    
+
+
+Mocha
+npm install --global mocha (install globally)
+npm install --save dev mocha (makes it a dev dependency on a project)
+
+npm install mocha chai --save dev
+
+NEW FILE STRUCTURE
+** on root **
+src - dir with all code
+test - dir with all tests
+
+naming convention for tests [moduleName].test.js
+
+can nest describe in describe
+
+**** [moduleName].test.js ****
+var [moduleName] = require('../src/modules/[moduleName]');
+var expect = require('chai').expect;
+
+describe('test for [moduleName]', function() {
+    describe('happy path', function() {
+        it('should do something', function() {
+            // call function to test and log results
+            console.log([moduleName]()); 
+            expect([moduleName]()).to.equal([return of moduleName]);
+        }) // end it
+        it('should return [a type]', function() {
+            expect([moduleName]()).to.be.a('[string, number, etc.]');
+        }) // end 2nd it
+    }) // end happy path
+    
+}); // end describe
+
+**** package.json ****
+
+"scripts":{
+    "start": "node src/server.js",
+    "test": "mocha test/"
+}
+
+ */
+
+
+/*************** Mongoose Sub Docs and Population ****************
+ 
+Code from lecture this morning: https://github.com/PrimeAcademy/canopus-mongoose-many-to-many
+Similar code from my prep with examples of postman queries: https://github.com/PrimeAcademy/mongoose-many-to-many
+
+Debugger
+ - attach to port
+ - point at server.js file
+ - once debugger is running you can hover the mouse over variables, and arguments to see their values
+
+ Multiple collections (1 to many and many to many)
+ - querying for one item in one collection shows the item and then the related item in an array showing just it's id
+
+ $populate
+ - this is how multiple collections can be related to each-other
+ [need luke's repo]
+
+$push 
+- pushes items into an array
+
+
+** Callback Hell
+    - when you have so many nested callbacks that there is barely any screen space left to write additional code
+
+
+ */
+
+
 /* Week 7 - Monday */
 
 
@@ -50,6 +156,13 @@ Being submitted does not mean you'll get a job, an interview, or even your resum
 
  */
 
+/******************* ReadMe ************************ 
+ 
+Readmes:
+ - https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+- https://guides.github.com/features/mastering-markdown
+
+*/
 
 
 /* Week 6 - Friday */
