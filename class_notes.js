@@ -1,7 +1,101 @@
+/* Week 7 - Wednesday */
+
+/***************  ES6/OOP ****************
+ 
+https://github.com/mhwalsh/psi-oop-es6-lecture-notes
+
+can mix ES6 with older versions
+
+Not all browsers support ES6. See this chart for details: 
+https://kangax.github.io/compat-table/es6/
+
+transpile (using babel and grunt)
+https://babeljs.io/
+    - convert es6 into es2015
+
+grunt
+    - can minifie
+    - can also setup something to automate the transpiling
+
+
+Object Oriented Programming
+
+https://github.com/mhwalsh/psi-oop-es6-lecture-notes/blob/master/oop.md
+    - an object is a concept that describes entities in our programs
+    - Java, C++, Python, and ES6 introduces some
+    
+Objects 
+    - identity (describes obj)
+    - attributes (defines state of object)
+    - behavior (defines how the objects acts, or ‘things they can do’)
+
+Classes
+    - how objects are described (sort of like a prototype)
+    - like a blueprint for the object
+    - must have a constructor(only 1 per class), but may also have behaviors 
+
+// Identity or name
+class Dog {
+  // attributes or state of the object
+  constructor(){
+    this.name = name;
+  } // end constructor
+  // procedures or behaviors that describe how the object acts
+  bark(){
+    console.log('woof!');
+  } // end bark
+} // end class
+
+
+Inheritance 
+    - classes can extend other classes by inheriting their attributes
+    - when extending you must use a super constructor (like below)
+    - does not hoist the same way it does in es2015 so animal must come first in the code
+
+class Animal {
+  constructor(name){
+    this.name = name;
+  } // end constructor
+  poop(){
+    console.log('everyone poops!');
+  } // end poop
+} // end Animal
+
+class Dog extends Animal{
+  constructor(name){
+    super(name);
+  } // end constructor
+  bark(){
+    console.log('woof!');
+  } // end bark
+} // end dog
+
+var ourDog = new Dog('Larry');
+
+class Cat extends Animal {
+    constructor(name, lives) {
+        super(name);
+        this.lives = lives;
+        this.landOnFeet = true;
+    } // end constructor
+    meow() {
+        console.log('meow')
+    } // end meow
+} // end cat
+
+var theCat = new Cat(Bro, 7);
+
+
+
+ */
+
+
+
 /* Week 7 - Tuesday */
 
 /********************* Unit Testing **********************
- 
+ https://github.com/PrimeAcademy/canopus-testing-intro
+
 Uses
 - Regression
     - testing old code as new code is written to make sure new code isn't breaking old code
@@ -19,6 +113,8 @@ Automated testing is different than test automation
 
 TYPES
  - Unit tests and Integration tests
+    - unit is more for testing individual pieces of code (functions etc.)
+    - integration is typically for testing the full stack (testing routes, etc.)
 
 Chai Assertion Library
     - chaijs.org
@@ -102,6 +198,19 @@ describe('test for server file server.js', function() {
     }) // end 2nd describe
 
 }); // end describe
+
+
+Other testing tools
+- karma
+- webdriver.io
+
+good functions to look into
+- inside describe before and after can be used to run things before testing and then after
+    before(); 
+    after();
+ 
+
+
 
  */
 
