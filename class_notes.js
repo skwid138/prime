@@ -91,6 +91,30 @@ BOOK TO READ
     - JavaScript Design Patterns
 
 
+Var, Let, and Const
+https://github.com/mhwalsh/psi-oop-es6-lecture-notes/blob/master/es6-intro.md
+
+var has function scope
+    - globally declared vars hold their value
+    - vars inside functions hold their value inside the function, but do not exist outside
+    - vars can be redeclared again and again
+
+let has block scope
+    - in a for loop let exists, but outside the for loop let is undefined
+    - another use for let would be in mathematical algorithms
+
+const has global scope
+    - cannot be redeclared
+    - cannot have the value change
+    - not hoisted
+
+
+Arrow Functions
+http://es6-features.org/#Constants
+
+let name = (params) => { 1+1 };
+
+
 
  */
 
