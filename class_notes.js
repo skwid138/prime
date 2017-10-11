@@ -87,6 +87,11 @@ var theCat = new Cat(Bro, 7);
 
 
 
+BOOK TO READ
+    - JavaScript Design Patterns
+
+
+
  */
 
 
