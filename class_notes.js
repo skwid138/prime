@@ -1,3 +1,62 @@
+/* Week 7 - Thursday */
+
+
+/*********************** Promises and Callbacks ********************
+ 
+******** Callbacks ********
+
+- a function that runs after another function
+- passed into a method as an argument (usually)
+
+function funcy (data, callback, error) {
+    for (let i = 0; i < data.length; i++) {
+        // do something
+    } // end for
+    if (callback) {
+        // if callback is passed in as an argument then call it
+        // if it's not passed in then it is undefined making this if falsy
+        callback(); 
+    } // end if callback
+    else if (error) {
+        error();
+    } // end else if for error
+} // end funcy
+
+
+********* Promises *********
+
+- if something happens then something else happens
+- promises are always objects
+- some promise objects have methods
+
+.then()
+    - a method of most promises
+
+.catch()
+    - a method of most promises
+
+from weekend 6 (refactored for promises)
+**** app.js ****
+app.get()
+request-promise(user_).then(function(body) {
+    res.send(body);
+    }).catch(function(error) {
+
+    } // end catch
+); // end request
+
+
+es6 has a promise constructor
+there are also promise libraries
+
+one advantage to using promises is that you can handle the success and error wherever you want(server, service, controller)
+
+
+
+ */
+
+
+
 /* Week 7 - Wednesday */
 
 /***************  ES6/OOP ****************
@@ -160,7 +219,7 @@ Circle CI
 
 Mocha
 npm install --global mocha (install globally)
-npm install --save dev mocha (makes it a dev dependency on a project)
+npm install mocha --save-dev  (makes it a dev dependency on a project)
 
 npm install mocha chai --save-dev
 
@@ -215,7 +274,7 @@ var url = 'http:///localhost:3000/[moduleName]/[module argument]
 describe('test for server file server.js', function() {
     describe('module route', function() {
         it('should do what module should do', function(done) {
-            request.(url, function(err, response, body) {
+            request(url, function(err, response, body) {
                 console.log('body ->', body);
                 // have to parse the body from JSON to a JS Obj
                 expect(JSON.parse(body).result).to.eqaul([what module return should be]);
@@ -698,7 +757,7 @@ res.status(200).send();
     - can be chained where sendStatus cannot
 
 
-npm install .env --save
+npm install dotenv --save
     - also a dependency of the project
 
 **** .env *****    
