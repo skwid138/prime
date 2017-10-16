@@ -1,3 +1,106 @@
+/* Week 8 - Monday */
+
+/******************** Taylor Time ********************
+
+** resume due nov 2nd at 10:00am **
+
+    - should be name my first and last name as a pdf
+    - send my bio
+    - send linkedin
+    - send github link 
+    - and send resume
+
+** Bio
+    - things I want to talk about in an interview
+    - not a dating profile
+    - what I'm doing what I want to do
+    - not about my age, etc.
+
+
+    If I want a resume review with kristy I have to slack her
+
+
+    Resume
+
+    NAME on the top
+    followed by contact info (email, phone, github link)
+    NO ADDRESS, NO CITY, NO STATE
+    NO LINKEDIN
+    could have personal site as well as long as it's about development
+
+headings for SKILLS with lists of skills (tech and none tech) most valuable skills and skills you're best at from top to bottom of list and left to right
+    DO NOT list skills that you do not want to use at a job
+    LIST 'MEAN STACK' and MONGO, EXPRESS, ANGULARJS, and NODE.JS
+
+heading for EXPERIENCE 
+    DO NOT say relevant or related just have experience
+    PRIME will be in experience and Education
+    use full month names and dashes between them
+    Title at prime can be anything, but needs to contain student (ie front end developer student or backend development student) 
+    DO NOT use engineer here it will be used later
+    list solo project and group project
+        solo (name)
+            (high level, leave a little mystery so employers are intrigued and want tto know more)
+            sentence fragments, no periods
+            - what is it - why did I create it (what was the issue and why am I solving it)
+            - who a user is and why would they use it
+            - tech used (can list MEAN stack and could also list it out)
+        group - client name (not app name)
+            - talk about working on a team of developers 
+            - who I worked with (how many devs NOT STUDENTS)
+            - what is the problem and what was the current process
+            - what is the solution we created? what the app does, how it's used and why its better
+            - what was I solely responsible for?
+            - technologies used (include APIs, but not modules for angular or material)
+
+Multiple job titles
+ - show full date range
+ then list titles and date range for just that position/title
+ if duties overlapped do not list them twice
+
+ list that I worked with people in multiple states
+ cross functional teams? - look into this
+
+ LINKEDIN should nto be the exact same as RESUME
+
+ it's okay to have gaps and only add jobs I want
+ probably don't go too far back college jobs are okay, if they're tech related
+
+ if I can get points across in another job it's okay to skip (ie working as a team operating heavy equipment)
+
+ heading for Education
+    - degree / cert
+    - location (city state)
+    - activities, honors, acheivments
+    Full-Stack Software Engineering Certification  <- exactly like this
+    (just month and year of graduation)
+    can list what prime is, but make it unique
+    only include month and year if graduated, if not then show range of attendance 
+
+
+heading *OPTIONAL* community Involvment / VOLUNTEERING
+        - this section can include volunteer work
+        - it cans include hackathons
+        - do not include meetup attendance
+        - can include things that do not involve development
+        Lay this out similar to experience
+
+
+START BY LISTING ALL INFO ON RESUME (EVEN IF IT's HUGE, THEN TRIM IT DOWN)
+
+No PAGE NUMBERS
+
+NO HEADER on 2nd, 3rd page etc.
+
+
+
+
+
+
+ */
+
+
+
 /* Week 7 - Thursday */
 
 
@@ -51,9 +154,16 @@ there are also promise libraries
 
 one advantage to using promises is that you can handle the success and error wherever you want(server, service, controller)
 
+*/
+
+/***************** Project Management ****************
+ 
+
+
 
 
  */
+
 
 
 
