@@ -1,3 +1,57 @@
+/* Week 9 - Tuesday */
+
+/******************** Taylor Time ********************
+
+- apply to jobs if I meet one of the bullets for requirements
+- apply to jobs that are sr. level devs (often times the description will show that a jr. dev could handle it)
+- apply to jobs that require 3-5 years of experience
+
+RIGHT NOW
+    - checkout job boards
+    - find companies that are hiring
+    - meet with people that work there
+    - do not apply to jobs
+    - setup saved searches to get emails on new postings
+    - make an account on https://mangoconnects.com/
+        - has info on how to find jobs and what processes to follow to apply or after an application
+        - https://app.mangoconnects.com/user/edit
+        
+    ** by weeks end setup a bunch of save searches 
+
+   
+
+Job Boards
+    do not have resume on indeed, monster, or career builder (oooops)
+    can use the above boards, but they are not as good as the rest
+    - tech dot mn (post jobs at 11am and 11pm daily)
+    - glass door
+    - the minneapolis egotist .com  (usually used by smaller companies)
+        - become a member (get jobs 3 days before posted to site and show up in a list)
+        - jon titles on this site might be a little odd
+    - dice
+    - craigslist
+        - software/dba/
+    - make it msp (jobs.makeitmsp.org)
+        - similar to indeed, but they do a better job at filtering things and they are better at showing the correct posting date
+    - linkedIn
+        - job section (create search alerts, to hear about new postings)
+        - 
+
+When Applying
+    - DO NOT apply to job through job board, unless you cannot find it anywhere else
+    - apply to ALL jobs via the companies website
+    - if there doesn't appear to be a careers or jobs link on the site try url/jobs or url/careers
+    - if company asks for resume to be emailed the body of the email should be cover letter
+    - apply with resume over linked in
+    - if cover letter is option, then ALWAYS send it
+    - DO NOT research a company until you hear back, so you don't waste time
+
+
+
+
+*/
+
+
 /* Week 8 - Monday */
 
 /******************** Taylor Time ********************
