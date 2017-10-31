@@ -1,3 +1,60 @@
+/* Week 10 - Tuesday */
+
+/******************** Taylor Time ********************
+ 
+** DO NOT CALL THEM
+** DO NOT SHOW UP AT COMPANY
+** DO NOT PUT PROJ LINKS IN COVER LETTER
+
+
+If submitting via a portal so the letter is a pdf it should have a header
+
+if it's via email no header is required, but make sure the signature has name, number, email, and github
+
+** NO CITY AND STATE
+
+cover letter
+
+4 paragraphs
+
+paragraph 1 
+    - why I'm applying, kiss their ass
+    - should be unique for me
+    - should be unique for company
+    * do not lead with who you know or make it sound like they are making you apply
+
+paragraph 2 - (can reuse for other jobs)
+    - build a story around 2 of the requirements around the job
+    - give them a narrative or story
+    - use verbiage they use
+    - can be about prime
+    - can be about technology
+
+paragraph 3 - (can reuse for other jobs)
+    -build a story around 2 of the requirements around the job 
+    - give them a narrative or story 
+    - use verbiage they use 
+    - should not be about prime 
+    - should not be about technology
+
+paragraph 4
+    - wrap up
+    - what do I want to do?
+    - give them a time and date when I want to do it
+    - I want to meet with a developer, for coffee etc.
+    - or meet with a team member
+    - give them at least a week 
+    - give dates and times when you'd like to meet
+    - follow up with them on the day you proposed to meet
+    - create the illusion that you're very busy so they assume you're busy in your job search
+    - can mention who told you about the job in this paragraph
+
+
+
+*/
+
+
+
 /* Week 9 - Tuesday */
 
 /******************** Taylor Time ********************
