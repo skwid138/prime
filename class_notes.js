@@ -156,7 +156,7 @@ When Applying
     - not about my age, etc.
 
 
-    If I want a resume review with kristy I have to slack her
+    If I want a resume review with Christy I have to slack her
 
 
     Resume
