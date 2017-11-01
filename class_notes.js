@@ -1,3 +1,31 @@
+/* Week 10 - Wednesday */
+
+/**************** Usability Testing by Angie *****************
+ 
+Three main things to indicate status to user
+    - color
+    - symbol/position
+    - text
+
+Feedback (wrong info, did you mean, empty filed, etc.)
+    - clear 
+    - kind
+    - helpful
+
+** Consistency
+    - color
+    - navigation
+    - errors
+
+Book
+https: //www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758
+
+Website
+
+
+ */
+
+
 /* Week 10 - Tuesday */
 
 /******************** Taylor Time ********************
@@ -172,7 +200,7 @@ Multiple job titles
  list that I worked with people in multiple states
  cross functional teams? - look into this
 
- LINKEDIN should nto be the exact same as RESUME
+ LINKEDIN should not be the exact same as RESUME
 
  it's okay to have gaps and only add jobs I want
  probably don't go too far back college jobs are okay, if they're tech related
@@ -182,14 +210,14 @@ Multiple job titles
  heading for Education
     - degree / cert
     - location (city state)
-    - activities, honors, acheivments
+    - activities, honors, achievements
     Full-Stack Software Engineering Certification  <- exactly like this
     (just month and year of graduation)
     can list what prime is, but make it unique
     only include month and year if graduated, if not then show range of attendance 
 
 
-heading *OPTIONAL* community Involvment / VOLUNTEERING
+heading *OPTIONAL* community Involvement / VOLUNTEERING
         - this section can include volunteer work
         - it cans include hackathons
         - do not include meetup attendance
