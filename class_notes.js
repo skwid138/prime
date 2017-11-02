@@ -1,3 +1,23 @@
+/* Week 10 - Thursday */
+
+/**************** Who? and Project Management Review *****************
+ 
+Organic Voodoo Machine - Dev's college band
+
+Epic > Story > Task > Subtask
+
+Profile Page > Login with existing credentials > 
+Login Screen > Input fields, error for incorrect creds, confirmation for correct, button design, sounds
+
+
+Build days every 2-3 days take an hour to deploy and test as a group to find bugs, update agile board and plan for the next day/week
+
+Email justin today and give him an ETA on the scope
+
+ */
+
+
+
 /* Week 10 - Wednesday */
 
 /**************** Usability Testing by Angie *****************
