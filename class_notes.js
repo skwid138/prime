@@ -1,3 +1,23 @@
+/* Week 11 - Tuesday */
+
+/****************** Career Development - Mock Interview Prep ****************
+ 
+Paul's website : http://www.mnheadhunter.com/
+
+- if rejected ask what you can do to improve and ask about sending them an updated resume in 6-9 months
+- if a company or person checks out linkedin send them a message and inquire about openings etc.
+- or ask for advice of people on linkedin for places or people to help find a job
+- message people who organize meetups 
+
+- click on as many cto, ceo, etc. profiles on linkedin, if they click back then reach out to them
+
+- think of this as relationship building and not trying to get something out of someone
+
+- thompson roters might be a good place to checkout
+
+
+ */
+
 /* Week 10 - Thursday */
 
 /**************** Who? and Project Management Review *****************
