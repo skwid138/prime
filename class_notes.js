@@ -1,3 +1,44 @@
+/* Week 12 - Tuesday */
+
+/*************** Paul Time *************
+ 
+follow up email after submitting a cover letter and resume
+    - could elaborate on something on the cover letter
+    - could discuss something about the company (ask questions)
+    - maybe discuss something on their linkedin profile
+
+How to find email
+*   @companyname.com - google this with 3 spaces between * and @ eventually it'll lead to the naming convention
+email @companyname.com
+
+
+if company is around 50 or less people feel free to email CEO
+
+* I got your contact info from...
+
+    say something to effect of, I saw on your careers page that you have X 
+    here's my resume (email is cover letter)
+    thank them and ask them to send it on if they're not the correct person to reach out
+
+    I know this is way out left field, but I don't know how to apply for a 
+    job and talk to someone at your company, can you help me out?
+
+
+If you cannot find who to address on the cover letter use dear hiring manager
+
+Follow up in about 3 days after applying                       
+
+Companies are always going to need someone even if it's not posted, eventually they'll need a person
+- it's okay to reach out and let them know what you can bring to the table
+- I see X and I know how to solve it, I'd love to chat
+- when I was doing X(job, school, customer) I experienced Y(a problem) and this is how I can improve it or fix it
+
+
+
+*/
+
+
+
 /* Week 11 - Tuesday */
 
 /****************** Career Development - Mock Interview Prep ****************
