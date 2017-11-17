@@ -1,3 +1,45 @@
+/* Week 12 - Friday */
+
+/***************** Christy Time ****************
+
+Interview Day
+Must be ready to meet by 1:30
+
+OST coming on the 29th
+Print Resume's monday morning
+
+Wear a tie, dress pants, button up shirt, maybe a jacket
+
+20 min interviews with 5 minute breaks
+we'll get a 5 min warning after 15 minutes - this can be a good time to get contact information and any job info I want to know
+
+print 15 resumes 
+
+bring resumes, note pad, and laptop to show solo project and group project
+
+make a map of keywords and then see how projects I did can fit in there 
+- gives you a away to talk about certain technologies
+- used SQL on group and solo project
+- used mongo on MEANIE and Realestate projects
+
+Have a story about something difficult that led me to here
+
+Greatest strengths and weaknesses
+- over planning
+- asking too many questions
+- it's a strength, but im still working on it
+
+
+
+Teach kids to code as a volunteer
+
+
+
+
+
+ */
+
+
 /* Week 12 - Tuesday */
 
 /*************** Paul Time *************
